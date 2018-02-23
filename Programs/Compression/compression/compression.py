@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import zlib
 import random
 import string
