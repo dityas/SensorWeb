@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple I/O Service for test
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/fileio
+ExecStart=/root/fileio/fileio.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.agent

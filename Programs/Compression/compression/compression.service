@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple Compression Service for test
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/compression
+ExecStart=/root/compression/compression.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.agent

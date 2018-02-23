@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple DFT Service for test
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/dft
+ExecStart=/root/dft/dft.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.agent

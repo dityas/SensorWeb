@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple Broadcast Service for test
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/root/bsend.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.agent
