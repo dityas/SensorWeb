@@ -13,7 +13,7 @@ def get_files(directory, files):
     return filenames
 
 
-PATH = "/home/adityas/Kaggle/SensorWeb/data/feb21/"
+PATH = "/home/adityas/Kaggle/SensorWeb/data/feb24/"
 
 
 def organise_data(_dir,
@@ -29,17 +29,18 @@ def organise_data(_dir,
         frames.append(pandas.read_csv(_file, header=None))
 
     columns = ["Time"]
-    with open(f"/home/adityas/Kaggle/SensorWeb/data/feb21/{name}_columns.txt") as f:
+    with open(f"/home/adityas/Kaggle/SensorWeb/data/feb24/{name}_columns.txt") as f:
 
         for line in f.readlines():
             columns.append(re.sub(r"'|\,|\(|\)|\.", "", line.strip()))
 
     frames = pandas.concat(frames, axis=0, ignore_index=True)
     frames.columns = columns
-    frames.to_csv(f"./feb21_{name}.csv")
+    frames.to_csv(f"./data/feb24/feb24_{name}.csv")
 
 
 organise_data(PATH, r".+cpu_.+\.csv", name="cpu")
 organise_data(PATH, r".+network_rx_.+\.csv", name="network_rx", key=lambda x: int(str(x).split("/")[-1].split(".")[0].split("_")[2]))
 organise_data(PATH, r".+network_tx_.+\.csv", name="network_tx", key=lambda x: int(str(x).split("/")[-1].split(".")[0].split("_")[2]))
 organise_data(PATH, r".+disk_io_.+\.csv", name="disk_io", key=lambda x: int(str(x).split("/")[-1].split(".")[0].split("_")[2]))
+organise_data(PATH, r".+processes_.+\.csv", name="processes")
