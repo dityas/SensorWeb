@@ -19,12 +19,14 @@ class Query(object):
         self.__make_network_tx_query()
         self.__make_disk_io_query()
         self.__make_process_query()
+        self.__make_context_query()
 
         self.queries = {"cpu": self.cpu_query,
                         "network_rx": self.network_rx_query,
                         "network_tx": self.network_tx_query,
                         "disk_io": self.disk_io_query,
-                        "processes": self.process_query}
+                        "processes": self.process_query,
+                        "context": self.context_query}
 
     def __make_cpu_query(self):
         self.__cpu_query = f"SELECT NON_NEGATIVE_DIFFERENCE(MEAN(\"value\")) FROM cpu_value WHERE time >= {self.start}s and time < {self.end}s GROUP BY time({self.delta}s), \"host\", \"type_instance\""
@@ -40,6 +42,9 @@ class Query(object):
 
     def __make_process_query(self):
         self.__process_query = f"SELECT NON_NEGATIVE_DIFFERENCE(MEAN(\"value\")) FROM processes_value WHERE time >= {self.start}s and time < {self.end}s GROUP BY time({self.delta}s), \"host\", \"type_instance\""
+
+    def __make_context_query(self):
+        self.__context_query = f"SELECT NON_NEGATIVE_DIFFERENCE(MEAN(\"value\")) FROM contextswitch_value WHERE time >= {self.start}s and time < {self.end}s GROUP BY time({self.delta}s), \"host\", \"type\""
 
     def get_query(self, name):
         return self.queries[name]
@@ -63,3 +68,7 @@ class Query(object):
     @property
     def process_query(self):
         return self.__process_query
+
+    @property
+    def context_query(self):
+        return self.__context_query

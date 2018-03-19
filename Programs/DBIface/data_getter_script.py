@@ -4,9 +4,9 @@ from influxdb import DataFrameClient
 from pathlib import Path
 from query import Query
 
-DATA_DIR = "/home/adityas/Kaggle/SensorWeb/data/feb24/"
-start = datetime.datetime(2018, 2, 24, 00, 00, 00)
-end = datetime.datetime(2018, 2, 25, 23, 00, 00)
+DATA_DIR = "/home/adityas/Kaggle/SensorWeb/data/ansi_single/"
+start = datetime.datetime(2018, 3, 6, 00, 00, 00)
+end = datetime.datetime(2018, 3, 12, 9, 00, 00)
 batch_delta = datetime.timedelta(seconds=3600)
 delta = 5
 
@@ -81,3 +81,6 @@ get_data(query="disk_io", name="disk_io", directory=DATA_DIR)
 
 time_generator = time_range_generator(start, end, batch_delta)
 get_data(query="processes", name="processes", directory=DATA_DIR)
+
+time_generator = time_range_generator(start, end, batch_delta)
+get_data(query="context", name="context", directory=DATA_DIR)
