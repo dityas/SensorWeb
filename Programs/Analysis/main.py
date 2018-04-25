@@ -13,7 +13,7 @@ def get_files(directory, files):
     return filenames
 
 
-DATA_SET = "ansi_single"
+DATA_SET = "ansi_final"
 PATH = f"/home/adityas/Kaggle/SensorWeb/data/{DATA_SET}/"
 
 

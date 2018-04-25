@@ -4,9 +4,9 @@ from influxdb import DataFrameClient
 from pathlib import Path
 from query import Query
 
-DATA_DIR = "/home/adityas/Kaggle/SensorWeb/data/ansi_single/"
-start = datetime.datetime(2018, 3, 6, 00, 00, 00)
-end = datetime.datetime(2018, 3, 12, 9, 00, 00)
+DATA_DIR = "/home/adityas/Kaggle/SensorWeb/data/ansi_final/"
+start = datetime.datetime(2018, 3, 13, 00, 00, 00)
+end = datetime.datetime(2018, 3, 16, 23, 00, 00)
 batch_delta = datetime.timedelta(seconds=3600)
 delta = 5
 
