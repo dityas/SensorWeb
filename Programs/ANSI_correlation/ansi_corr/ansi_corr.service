@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple ANSI Service for test
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/ansi_corr
+ExecStart=/root/ansi_corr/ansi_corr.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.agent

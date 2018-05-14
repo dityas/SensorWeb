@@ -1,3 +1,9 @@
 Images/
 *.csv
-*.ipynb
+*.npy
+*.png
+data/
+__pycache__/
+*.pyc
+admin_scripts/
+Synthetic/
