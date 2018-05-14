@@ -3,3 +3,5 @@ Images/
 *.npy
 *.png
 data/
+__pycache__/
+*.pyc
