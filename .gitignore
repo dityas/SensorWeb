@@ -7,3 +7,4 @@ __pycache__/
 *.pyc
 admin_scripts/
 Synthetic/
+models/
