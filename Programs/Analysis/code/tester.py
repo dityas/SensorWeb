@@ -103,7 +103,7 @@ class Tester:
             else:
                 mark[i] = 0.0
 
-        return mark
+        return outlier
 
     def store_plot(self, plots, names, duration, name):
         plotter.figure()
