@@ -70,7 +70,7 @@ class Tester:
                 continue
 
             mean, std = running_mean[i], running_std[i]
-            val = max(0, s_h - data[i] - mean - std)
+            val = max(0, s_h + data[i] - mean - std)
 
             if val > thres * std:
                 alarm[i] = 1.0
