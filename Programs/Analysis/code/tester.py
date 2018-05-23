@@ -58,7 +58,7 @@ class Tester:
             self.do_width_test()
             break
 
-    def __run_CAD(self, data, start=50, thres=1):
+    def __run_CAD(self, data, start=50, thres=6):
 
         data = pandas.Series(data)
         running_mean = data.expanding().mean()
@@ -137,6 +137,7 @@ class Tester:
             # Create synthetic anomalies in network and CPU usage.
             net_dataset[anomaly_range: anomaly_range+width, 21: 23] = 1.0
             cpu_dataset[anomaly_range: anomaly_range+width, 0] = 0.0
+            cpu_dataset[anomaly_range: anomaly_range+width, 6] = 1.0
             true[anomaly_range: anomaly_range+width] = 1.0
 
             # Run prediction loop on synthetic data.
