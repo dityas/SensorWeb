@@ -86,24 +86,52 @@ class Tester:
     def __run_Chebyshev(self, data):
 
         arr = pandas.Series(data)
-        means = arr.mean()
-        std = arr.std()
+        mean = 0
+        count = 0
+        outliers = numpy.zeros_like(arr)
+        thres = numpy.zeros_like(arr)
+        means = numpy.zeros_like(arr)
+        cmeans = arr.expanding().mean()
+        std = 0
 
-        outlier = (arr > (means + (5.0 * std))) * 1.0
-        mark = numpy.zeros(arr.shape[0])
+        # Compute running stats
 
-        window = 100
+        m2 = 0
+        for i in range(len(arr)):
 
-        for i in range(window, outlier.shape[0]):
-            num = window
-            outliers = numpy.sum(outlier[i-window:i])
-            per = outliers/num
-            if per > 0.04:
-                mark[i-window:i] = outlier[i-window:i]
-            else:
-                mark[i] = 0.0
+            if i > 100 and arr[i] > (mean + 5 * std):
+                outliers[i] = 1.0
+                means[i] = mean
+                thres[i] = mean + (5 * std)
+                continue
 
-        return outlier
+            count = count + 1
+            delta = arr[i] - mean
+
+            mean = mean + (delta/count)
+            means[i] = mean
+
+            new_delta = arr[i] - mean
+            m2 = m2 + delta * new_delta
+
+            std = numpy.sqrt(m2 / count)
+
+            thres[i] = mean + (5 * std)
+
+        # mark = numpy.zeros(arr.shape[0])
+
+        # window = 100
+        #
+        # for i in range(window, outlier.shape[0]):
+        #     num = window
+        #     outliers = numpy.sum(outlier[i-window:i])
+        #     per = outliers/num
+        #     if per > 0.04:
+        #         mark[i-window:i] = outlier[i-window:i]
+        #     else:
+        #         mark[i] = 0.0
+
+        return outliers
 
     def store_plot(self, plots, names, duration, name):
         plotter.figure()
