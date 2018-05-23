@@ -77,10 +77,10 @@ class Tester:
             alarm[i] = 1.0
         else:
             s_h = val
-        plotter.plot(data, alpha=0.3)
         #plotter.plot(data, alpha=0.3)
-        plotter.plot(alarm)
-        plotter.show()
+        #plotter.plot(data, alpha=0.3)
+        #plotter.plot(alarm)
+        #plotter.show()
 
         return alarm
 
