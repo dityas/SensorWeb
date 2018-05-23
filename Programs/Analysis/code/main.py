@@ -48,5 +48,5 @@ elif args.test:
 
         _tester = Tester(test_set=test[7, 3000:10000, :],
                          window=tsteps, model=model, model_name=name,
-                         store_dir="comp_images/")
+                         store_dir="cad_images/")
         _tester.run_tests()

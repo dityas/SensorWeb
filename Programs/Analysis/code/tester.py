@@ -58,19 +58,26 @@ class Tester:
             self.do_width_test()
             break
 
-    def __run_CAD(self, data):
+    def __run_CAD(self, data, start=50, thres=5):
 
-        #data = (data - numpy.mean(data)) / numpy.std(data)
-        dmean = pandas.Series(data).expanding().mean()
-        dstd = pandas.Series(data).expanding().std()
-        gpos, gneg = numpy.zeros(data.size), numpy.zeros(data.size)
-        alarm = numpy.zeros(data.size)
+        data = pandas.Series(data)
+        running_mean = data.expanding().mean()
+        running_std = data.expanding().std()
+        alarm = numpy.zeros_like(data)
 
+        s_h = 0
+        for i in range(len(data)):
+            if i < start:
+                continue
 
-        #print(data.shape)
-        gpos = (data - dmean) / (dstd)
-        alarm = gpos > 4
-        plotter.plot(gpos, alpha=0.3)
+        mean, std = running_mean[i], running_std[i]
+        val = max(0, s_h - data[i] - mean - std)
+
+        if val > thres * std:
+            alarm[i] = 1.0
+        else:
+            s_h = val
+        plotter.plot(data, alpha=0.3)
         #plotter.plot(data, alpha=0.3)
         plotter.plot(alarm)
         plotter.show()
