@@ -58,7 +58,7 @@ class Tester:
             self.do_width_test()
             break
 
-    def __run_CAD(self, data, start=50, thres=5):
+    def __run_CAD(self, data, start=50, thres=3):
 
         data = pandas.Series(data)
         running_mean = data.expanding().mean()
