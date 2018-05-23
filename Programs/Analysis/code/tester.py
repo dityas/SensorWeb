@@ -69,13 +69,13 @@ class Tester:
             if i < start:
                 continue
 
-        mean, std = running_mean[i], running_std[i]
-        val = max(0, s_h - data[i] - mean - std)
+            mean, std = running_mean[i], running_std[i]
+            val = max(0, s_h - data[i] - mean - std)
 
-        if val > thres * std:
-            alarm[i] = 1.0
-        else:
-            s_h = val
+            if val > thres * std:
+                alarm[i] = 1.0
+            else:
+                s_h = val
         #plotter.plot(data, alpha=0.3)
         #plotter.plot(data, alpha=0.3)
         #plotter.plot(alarm)
