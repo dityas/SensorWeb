@@ -11,7 +11,7 @@ import logging
 import argparse
 
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG, filename="f1_exp.log")
 
 # Make shell script option parser
 parser = argparse.ArgumentParser()
