@@ -1,6 +1,7 @@
 import logging
 import numpy
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error, recall_score, f1_score
+from sklearn.neighbors import LocalOutlierFactor
 from models import flat_generator
 import matplotlib.pyplot as plotter
 import pandas
@@ -57,6 +58,14 @@ class Tester:
             # Anomaly width test
             self.do_width_test()
             break
+
+    def __run_LOF(self, data):
+        clf = LocalOutlierFactor(n_neighbors=100, metric='euclidean')
+        data = numpy.array(data)
+        data = data[:, numpy.newaxis]
+        outliers = clf.fit_predict(data)
+        outliers = 1.0 * (outliers < 0)
+        return outliers
 
     def __run_CAD(self, data, start=50, thres=6):
 
@@ -134,24 +143,29 @@ class Tester:
         return outliers
 
     def store_plot(self, plots, names, duration, name):
-        plotter.figure()
-        plotter.title(f"{self.model_name}_{self.window}_{name}.png")
-        plotter.subplot(311)
-        plotter.plot(plots[0], label=names[0], linewidth=0.5)
-        plotter.xlabel("Time")
-        plotter.legend()
-        plotter.subplot(312)
-        plotter.plot(plots[1], label=names[1], linewidth=0.5)
-        plotter.xlabel("Time")
-        plotter.legend()
-        plotter.subplot(313)
-        plotter.plot(plots[2], label=names[2], linewidth=0.5)
-        plotter.xlabel("Time")
-        plotter.legend()
+        # plotter.figure()
+        # plotter.title(f"{self.model_name}_{self.window}_{name}.png")
+        # plotter.subplot(311)
+        # plotter.plot(plots[0], label=names[0], linewidth=0.5)
+        # plotter.xlabel("Time")
+        # plotter.legend()
+        # plotter.subplot(312)
+        # plotter.plot(plots[1], label=names[1], linewidth=0.5)
+        # plotter.xlabel("Time")
+        # plotter.legend()
+        # plotter.subplot(313)
+        # plotter.plot(plots[2], label=names[2], linewidth=0.5)
+        # plotter.xlabel("Time")
+        # plotter.legend()
         _name = f"{self.store_dir}/{self.model_name}_{duration}_{name}.png"
-        self.logger.info(f"Saving figure {_name}")
-        plotter.savefig(_name, dpi=500)
-        plotter.close()
+        # self.logger.info(f"Saving figure {_name}")
+        # plotter.savefig(_name, dpi=500)
+        # plotter.close()
+        truth = plots[1]
+        alarms = plots[2]
+        f1 = f1_score(y_true=truth, y_pred=alarms)
+        recall = recall_score(y_true=truth, y_pred=alarms)
+        self.logger.info(f"For {_name}, f1 is {f1}, recall is {recall}")
 
     def do_width_test(self):
 
@@ -209,3 +223,21 @@ class Tester:
                             ["error",
                              "truth",
                              "alarms"], width, "cpu_chb")
+
+            net_alarms = self.__run_LOF(numpy.array(net_error))
+
+            self.store_plot([net_error,
+                             true[len(true)-len(net_error):],
+                             net_alarms],
+                            ["error",
+                             "truth",
+                             "alarms"], width, "net_lof")
+
+            cpu_alarms = self.__run_LOF(numpy.array(cpu_error))
+
+            self.store_plot([net_error,
+                             true[len(true)-len(cpu_error):],
+                             cpu_alarms],
+                            ["error",
+                             "truth",
+                             "alarms"], width, "cpu_lof")
