@@ -1,0 +1,1122 @@
+INFO:PreProcessor:Finished reading CPU usage data.
+INFO:PreProcessor:Finished reading Network TX data.
+INFO:PreProcessor:Finished reading Network RX data.
+INFO:PreProcessor:Finished reading Disk IO data.
+INFO:PreProcessor:Finished reading Context switching data.
+INFO:PreProcessor:Dataset for node 1 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 2 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 3 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 4 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 5 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 6 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 7 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 8 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 9 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 10 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 11 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 12 created with shape (68300, 29)
+DEBUG:PreProcessor:Column 0 is cpu_value host bb1localdomain type_instance idle
+DEBUG:PreProcessor:Column 1 is cpu_value host bb1localdomain type_instance interrupt
+DEBUG:PreProcessor:Column 2 is cpu_value host bb1localdomain type_instance nice
+DEBUG:PreProcessor:Column 3 is cpu_value host bb1localdomain type_instance softirq
+DEBUG:PreProcessor:Column 4 is cpu_value host bb1localdomain type_instance steal
+DEBUG:PreProcessor:Column 5 is cpu_value host bb1localdomain type_instance system
+DEBUG:PreProcessor:Column 6 is cpu_value host bb1localdomain type_instance user
+DEBUG:PreProcessor:Column 7 is cpu_value host bb1localdomain type_instance wait
+DEBUG:PreProcessor:Column 8 is interface_tx host bb1localdomain instance lo type if_dropped
+DEBUG:PreProcessor:Column 9 is interface_tx host bb1localdomain instance lo type if_errors
+DEBUG:PreProcessor:Column 10 is interface_tx host bb1localdomain instance lo type if_octets
+DEBUG:PreProcessor:Column 11 is interface_tx host bb1localdomain instance lo type if_packets
+DEBUG:PreProcessor:Column 12 is interface_tx host bb1localdomain instance wlan0 type if_dropped
+DEBUG:PreProcessor:Column 13 is interface_tx host bb1localdomain instance wlan0 type if_errors
+DEBUG:PreProcessor:Column 14 is interface_tx host bb1localdomain instance wlan0 type if_octets
+DEBUG:PreProcessor:Column 15 is interface_tx host bb1localdomain instance wlan0 type if_packets
+DEBUG:PreProcessor:Column 16 is interface_rx host bb1localdomain instance lo type if_dropped
+DEBUG:PreProcessor:Column 17 is interface_rx host bb1localdomain instance lo type if_errors
+DEBUG:PreProcessor:Column 18 is interface_rx host bb1localdomain instance lo type if_octets
+DEBUG:PreProcessor:Column 19 is interface_rx host bb1localdomain instance lo type if_packets
+DEBUG:PreProcessor:Column 20 is interface_rx host bb1localdomain instance wlan0 type if_dropped
+DEBUG:PreProcessor:Column 21 is interface_rx host bb1localdomain instance wlan0 type if_errors
+DEBUG:PreProcessor:Column 22 is interface_rx host bb1localdomain instance wlan0 type if_octets
+DEBUG:PreProcessor:Column 23 is interface_rx host bb1localdomain instance wlan0 type if_packets
+DEBUG:PreProcessor:Column 24 is disk_io_time host bb1localdomain instance mmcblk1 type disk_io_time
+DEBUG:PreProcessor:Column 25 is disk_io_time host bb1localdomain instance mmcblk1boot0 type disk_io_time
+DEBUG:PreProcessor:Column 26 is disk_io_time host bb1localdomain instance mmcblk1boot1 type disk_io_time
+DEBUG:PreProcessor:Column 27 is disk_io_time host bb1localdomain instance mmcblk1p1 type disk_io_time
+DEBUG:PreProcessor:Column 28 is contextswitch_value host bb1localdomain type contextswitch
+DEBUG:PreProcessor:Data combined to single dataframe of dim (819600, 29)
+DEBUG:PreProcessor:Scaler fit to data.
+INFO:PreProcessor:Testing set created of dim (8, 68300, 29)
+INFO:PreProcessor:Training set created of dim (4, 54640, 29)
+INFO:PreProcessor:Validation set created of dim (4, 13660, 29)
+INFO:Tester:Starting tests with LinearModel_20
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_20_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_20_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_20_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_20_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_20_1_net_lof.png, f1 is 0.0028612303290414874, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_20_1_cpu_lof.png, f1 is 0.0028612303290414874, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_20_2_net_cad.png, f1 is 0.11764705882352941, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_20_2_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_20_2_net_chb.png, f1 is 0.2, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_20_2_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_20_2_net_lof.png, f1 is 0.002857142857142857, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_20_2_cpu_lof.png, f1 is 0.002857142857142857, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_20_3_net_cad.png, f1 is 0.2, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_20_3_cpu_cad.png, f1 is 0.10526315789473684, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_20_3_net_chb.png, f1 is 0.3333333333333333, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_20_3_cpu_chb.png, f1 is 0.2, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_20_3_net_lof.png, f1 is 0.005706134094151213, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_20_3_cpu_lof.png, f1 is 0.005706134094151213, recall is 0.6666666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_20_4_net_cad.png, f1 is 0.27272727272727276, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_20_4_cpu_cad.png, f1 is 0.19047619047619047, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_20_4_net_chb.png, f1 is 0.4285714285714285, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_20_4_cpu_chb.png, f1 is 0.3333333333333333, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_20_4_net_lof.png, f1 is 0.011396011396011397, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_20_4_cpu_lof.png, f1 is 0.008547008547008548, recall is 0.75
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_20_5_net_cad.png, f1 is 0.25, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_20_5_cpu_cad.png, f1 is 0.09523809523809523, recall is 0.2
+INFO:Tester:For lof_images//LinearModel_20_5_net_chb.png, f1 is 0.5000000000000001, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_20_5_cpu_chb.png, f1 is 0.15384615384615385, recall is 0.2
+INFO:Tester:For lof_images//LinearModel_20_5_net_lof.png, f1 is 0.01422475106685633, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_20_5_cpu_lof.png, f1 is 0.011379800853485063, recall is 0.8
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_20_6_net_cad.png, f1 is 0.3846153846153846, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_20_6_cpu_cad.png, f1 is 0.16666666666666666, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_20_6_net_chb.png, f1 is 0.5555555555555556, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_20_6_cpu_chb.png, f1 is 0.26666666666666666, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_20_6_net_lof.png, f1 is 0.014204545454545456, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_20_6_cpu_lof.png, f1 is 0.008522727272727274, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_20_7_net_cad.png, f1 is 0.42857142857142855, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_20_7_cpu_cad.png, f1 is 0.23076923076923078, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_20_7_net_chb.png, f1 is 0.6, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_20_7_cpu_chb.png, f1 is 0.26666666666666666, recall is 0.2857142857142857
+INFO:Tester:For lof_images//LinearModel_20_7_net_lof.png, f1 is 0.01702127659574468, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_20_7_cpu_lof.png, f1 is 0.011347517730496453, recall is 0.5714285714285714
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_20_8_net_cad.png, f1 is 0.44444444444444436, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_20_8_cpu_cad.png, f1 is 0.15999999999999998, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_20_8_net_chb.png, f1 is 0.6363636363636364, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_20_8_cpu_chb.png, f1 is 0.25, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_20_8_net_lof.png, f1 is 0.019830028328611898, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_20_8_cpu_lof.png, f1 is 0.0169971671388102, recall is 0.75
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_20_9_net_cad.png, f1 is 0.5, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_20_9_cpu_cad.png, f1 is 0.3225806451612903, recall is 0.5555555555555556
+INFO:Tester:For lof_images//LinearModel_20_9_net_chb.png, f1 is 0.6666666666666667, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_20_9_cpu_chb.png, f1 is 0.2105263157894737, recall is 0.2222222222222222
+INFO:Tester:For lof_images//LinearModel_20_9_net_lof.png, f1 is 0.022630834512022628, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_20_9_cpu_lof.png, f1 is 0.022630834512022628, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_20_10_net_cad.png, f1 is 0.5625000000000001, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_20_10_cpu_cad.png, f1 is 0.48484848484848486, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_20_10_net_chb.png, f1 is 0.6923076923076923, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_20_10_cpu_chb.png, f1 is 0.4000000000000001, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_20_10_net_lof.png, f1 is 0.025423728813559324, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_20_10_cpu_lof.png, f1 is 0.025423728813559324, recall is 0.9
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_20_11_net_cad.png, f1 is 0.5882352941176471, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_20_11_cpu_cad.png, f1 is 0.4444444444444444, recall is 0.7272727272727273
+INFO:Tester:For lof_images//LinearModel_20_11_net_chb.png, f1 is 0.7142857142857143, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_20_11_cpu_chb.png, f1 is 0.45454545454545453, recall is 0.45454545454545453
+INFO:Tester:For lof_images//LinearModel_20_11_net_lof.png, f1 is 0.02820874471086037, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_20_11_cpu_lof.png, f1 is 0.022566995768688293, recall is 0.7272727272727273
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_20_12_net_cad.png, f1 is 0.611111111111111, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_20_12_cpu_cad.png, f1 is 0.4736842105263157, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_20_12_net_chb.png, f1 is 0.7333333333333334, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_20_12_cpu_chb.png, f1 is 0.3636363636363636, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_20_12_net_lof.png, f1 is 0.030985915492957747, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_20_12_cpu_lof.png, f1 is 0.02535211267605634, recall is 0.75
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_20_13_net_cad.png, f1 is 0.631578947368421, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_20_13_cpu_cad.png, f1 is 0.5263157894736842, recall is 0.7692307692307693
+INFO:Tester:For lof_images//LinearModel_20_13_net_chb.png, f1 is 0.7499999999999999, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_20_13_cpu_chb.png, f1 is 0.34782608695652173, recall is 0.3076923076923077
+INFO:Tester:For lof_images//LinearModel_20_13_net_lof.png, f1 is 0.03375527426160338, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_20_13_cpu_lof.png, f1 is 0.030942334739803092, recall is 0.8461538461538461
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_20_14_net_cad.png, f1 is 0.6341463414634146, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_20_14_cpu_cad.png, f1 is 0.46511627906976755, recall is 0.7142857142857143
+INFO:Tester:For lof_images//LinearModel_20_14_net_chb.png, f1 is 0.7647058823529412, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_20_14_cpu_chb.png, f1 is 0.4444444444444445, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_20_14_net_lof.png, f1 is 0.03651685393258427, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_20_14_cpu_lof.png, f1 is 0.02808988764044944, recall is 0.7142857142857143
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_20_15_net_cad.png, f1 is 0.6511627906976745, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_20_15_cpu_cad.png, f1 is 0.489795918367347, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_20_15_net_chb.png, f1 is 0.7777777777777778, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_20_15_cpu_chb.png, f1 is 0.4444444444444445, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_20_15_net_lof.png, f1 is 0.039270687237026654, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_20_15_cpu_lof.png, f1 is 0.03646563814866761, recall is 0.8666666666666667
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_20_16_net_cad.png, f1 is 0.6976744186046512, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_20_16_cpu_cad.png, f1 is 0.47826086956521735, recall is 0.6875
+INFO:Tester:For lof_images//LinearModel_20_16_net_chb.png, f1 is 0.7894736842105263, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_20_16_cpu_chb.png, f1 is 0.41379310344827586, recall is 0.375
+INFO:Tester:For lof_images//LinearModel_20_16_net_lof.png, f1 is 0.04201680672268907, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_20_16_cpu_lof.png, f1 is 0.030812324929971987, recall is 0.6875
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_20_17_net_cad.png, f1 is 0.7111111111111111, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_20_17_cpu_cad.png, f1 is 0.5531914893617021, recall is 0.7647058823529411
+INFO:Tester:For lof_images//LinearModel_20_17_net_chb.png, f1 is 0.7999999999999999, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_20_17_cpu_chb.png, f1 is 0.29629629629629634, recall is 0.23529411764705882
+INFO:Tester:For lof_images//LinearModel_20_17_net_lof.png, f1 is 0.04475524475524476, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_20_17_cpu_lof.png, f1 is 0.03636363636363637, recall is 0.7647058823529411
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_20_18_net_cad.png, f1 is 0.7391304347826088, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_20_18_cpu_cad.png, f1 is 0.6037735849056604, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_20_18_net_chb.png, f1 is 0.8095238095238096, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_20_18_cpu_chb.png, f1 is 0.41379310344827586, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_20_18_net_lof.png, f1 is 0.04748603351955308, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_20_18_cpu_lof.png, f1 is 0.04748603351955308, recall is 0.9444444444444444
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_20_19_net_cad.png, f1 is 0.75, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_20_19_cpu_cad.png, f1 is 0.5490196078431372, recall is 0.7368421052631579
+INFO:Tester:For lof_images//LinearModel_20_19_net_chb.png, f1 is 0.8181818181818181, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_20_19_cpu_chb.png, f1 is 0.27586206896551724, recall is 0.21052631578947367
+INFO:Tester:For lof_images//LinearModel_20_19_net_lof.png, f1 is 0.05020920502092051, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_20_19_cpu_lof.png, f1 is 0.039051603905160395, recall is 0.7368421052631579
+INFO:Tester:Starting tests with LinearModel_2
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_2_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_1_net_lof.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_1_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_2_2_net_cad.png, f1 is 0.3333333333333333, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_2_2_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_2_net_chb.png, f1 is 0.5, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_2_2_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_2_net_lof.png, f1 is 0.005698005698005697, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_2_2_cpu_lof.png, f1 is 0.0028490028490028487, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_2_3_net_cad.png, f1 is 0.28571428571428575, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_2_3_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_3_net_chb.png, f1 is 0.6666666666666666, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_2_3_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_3_net_lof.png, f1 is 0.005689900426742532, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_2_3_cpu_lof.png, f1 is 0.002844950213371266, recall is 0.3333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_2_4_net_cad.png, f1 is 0.6, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_2_4_cpu_cad.png, f1 is 0.22222222222222224, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_2_4_net_chb.png, f1 is 0.75, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_2_4_cpu_chb.png, f1 is 0.4, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_2_4_net_lof.png, f1 is 0.011363636363636362, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_2_4_cpu_lof.png, f1 is 0.005681818181818181, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_2_5_net_cad.png, f1 is 0.5, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_2_5_cpu_cad.png, f1 is 0.3333333333333333, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_2_5_net_chb.png, f1 is 0.8000000000000002, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_2_5_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_5_net_lof.png, f1 is 0.011347517730496455, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_2_5_cpu_lof.png, f1 is 0.005673758865248227, recall is 0.4
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_2_6_net_cad.png, f1 is 0.5714285714285715, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_2_6_cpu_cad.png, f1 is 0.1818181818181818, recall is 0.16666666666666666
+INFO:Tester:For lof_images//LinearModel_2_6_net_chb.png, f1 is 0.8333333333333334, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_2_6_cpu_chb.png, f1 is 0.2857142857142857, recall is 0.16666666666666666
+INFO:Tester:For lof_images//LinearModel_2_6_net_lof.png, f1 is 0.014164305949008497, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_2_6_cpu_lof.png, f1 is 0.0056657223796034, recall is 0.3333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_2_7_net_cad.png, f1 is 0.6666666666666666, recall is 0.7142857142857143
+INFO:Tester:For lof_images//LinearModel_2_7_cpu_cad.png, f1 is 0.16666666666666666, recall is 0.14285714285714285
+INFO:Tester:For lof_images//LinearModel_2_7_net_chb.png, f1 is 0.8571428571428571, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_2_7_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_7_net_lof.png, f1 is 0.016973125884016973, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_2_7_cpu_lof.png, f1 is 0.005657708628005658, recall is 0.2857142857142857
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_2_8_net_cad.png, f1 is 0.7058823529411765, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_2_8_cpu_cad.png, f1 is 0.39999999999999997, recall is 0.375
+INFO:Tester:For lof_images//LinearModel_2_8_net_chb.png, f1 is 0.875, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_2_8_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_8_net_lof.png, f1 is 0.01977401129943503, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_2_8_cpu_lof.png, f1 is 0.01129943502824859, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_2_9_net_cad.png, f1 is 0.7368421052631577, recall is 0.7777777777777778
+INFO:Tester:For lof_images//LinearModel_2_9_cpu_cad.png, f1 is 0.2857142857142857, recall is 0.2222222222222222
+INFO:Tester:For lof_images//LinearModel_2_9_net_chb.png, f1 is 0.8888888888888888, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_2_9_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_9_net_lof.png, f1 is 0.022566995768688293, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_2_9_cpu_lof.png, f1 is 0.011283497884344146, recall is 0.4444444444444444
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_2_10_net_cad.png, f1 is 0.761904761904762, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_2_10_cpu_cad.png, f1 is 0.47058823529411764, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_2_10_net_chb.png, f1 is 0.9, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_2_10_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_10_net_lof.png, f1 is 0.025352112676056335, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_2_10_cpu_lof.png, f1 is 0.016901408450704224, recall is 0.6
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_2_11_net_cad.png, f1 is 0.7826086956521738, recall is 0.8181818181818182
+INFO:Tester:For lof_images//LinearModel_2_11_cpu_cad.png, f1 is 0.5, recall is 0.45454545454545453
+INFO:Tester:For lof_images//LinearModel_2_11_net_chb.png, f1 is 0.9090909090909091, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_2_11_cpu_chb.png, f1 is 0.16666666666666669, recall is 0.09090909090909091
+INFO:Tester:For lof_images//LinearModel_2_11_net_lof.png, f1 is 0.028129395218002815, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_2_11_cpu_lof.png, f1 is 0.01687763713080169, recall is 0.5454545454545454
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_2_12_net_cad.png, f1 is 0.7692307692307692, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_2_12_cpu_cad.png, f1 is 0.45454545454545453, recall is 0.4166666666666667
+INFO:Tester:For lof_images//LinearModel_2_12_net_chb.png, f1 is 0.9166666666666666, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_2_12_cpu_chb.png, f1 is 0.15384615384615385, recall is 0.08333333333333333
+INFO:Tester:For lof_images//LinearModel_2_12_net_lof.png, f1 is 0.030898876404494385, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_2_12_cpu_lof.png, f1 is 0.011235955056179775, recall is 0.3333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_2_13_net_cad.png, f1 is 0.8148148148148148, recall is 0.8461538461538461
+INFO:Tester:For lof_images//LinearModel_2_13_cpu_cad.png, f1 is 0.4545454545454546, recall is 0.38461538461538464
+INFO:Tester:For lof_images//LinearModel_2_13_net_chb.png, f1 is 0.9230769230769231, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_2_13_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_13_net_lof.png, f1 is 0.033660589060308554, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_2_13_cpu_lof.png, f1 is 0.008415147265077139, recall is 0.23076923076923078
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_2_14_net_cad.png, f1 is 0.8275862068965518, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_2_14_cpu_cad.png, f1 is 0.7407407407407408, recall is 0.7142857142857143
+INFO:Tester:For lof_images//LinearModel_2_14_net_chb.png, f1 is 0.9285714285714286, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_2_14_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_14_net_lof.png, f1 is 0.036414565826330535, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_2_14_cpu_lof.png, f1 is 0.01680672268907563, recall is 0.42857142857142855
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_2_15_net_cad.png, f1 is 0.8387096774193549, recall is 0.8666666666666667
+INFO:Tester:For lof_images//LinearModel_2_15_cpu_cad.png, f1 is 0.5714285714285715, recall is 0.5333333333333333
+INFO:Tester:For lof_images//LinearModel_2_15_net_chb.png, f1 is 0.9333333333333333, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_2_15_cpu_chb.png, f1 is 0.125, recall is 0.06666666666666667
+INFO:Tester:For lof_images//LinearModel_2_15_net_lof.png, f1 is 0.039160839160839164, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_2_15_cpu_lof.png, f1 is 0.011188811188811189, recall is 0.26666666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_2_16_net_cad.png, f1 is 0.8484848484848485, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_2_16_cpu_cad.png, f1 is 0.6896551724137931, recall is 0.625
+INFO:Tester:For lof_images//LinearModel_2_16_net_chb.png, f1 is 0.9375, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_2_16_cpu_chb.png, f1 is 0.11764705882352941, recall is 0.0625
+INFO:Tester:For lof_images//LinearModel_2_16_net_lof.png, f1 is 0.04189944134078213, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_2_16_cpu_lof.png, f1 is 0.013966480446927375, recall is 0.3125
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_2_17_net_cad.png, f1 is 0.8333333333333333, recall is 0.8823529411764706
+INFO:Tester:For lof_images//LinearModel_2_17_cpu_cad.png, f1 is 0.6451612903225806, recall is 0.5882352941176471
+INFO:Tester:For lof_images//LinearModel_2_17_net_chb.png, f1 is 0.9411764705882353, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_2_17_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_17_net_lof.png, f1 is 0.044630404463040445, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_2_17_cpu_lof.png, f1 is 0.01394700139470014, recall is 0.29411764705882354
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_2_18_net_cad.png, f1 is 0.8648648648648649, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_2_18_cpu_cad.png, f1 is 0.6666666666666666, recall is 0.6111111111111112
+INFO:Tester:For lof_images//LinearModel_2_18_net_chb.png, f1 is 0.9444444444444444, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_2_18_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_2_18_net_lof.png, f1 is 0.04735376044568245, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_2_18_cpu_lof.png, f1 is 0.022284122562674095, recall is 0.4444444444444444
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_2_19_net_cad.png, f1 is 0.8500000000000001, recall is 0.8947368421052632
+INFO:Tester:For lof_images//LinearModel_2_19_cpu_cad.png, f1 is 0.6666666666666667, recall is 0.631578947368421
+INFO:Tester:For lof_images//LinearModel_2_19_net_chb.png, f1 is 0.9473684210526315, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_2_19_cpu_chb.png, f1 is 0.1, recall is 0.05263157894736842
+INFO:Tester:For lof_images//LinearModel_2_19_net_lof.png, f1 is 0.050069541029207236, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_2_19_cpu_lof.png, f1 is 0.016689847009735744, recall is 0.3157894736842105
+INFO:Tester:Starting tests with LinearModel_100
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_100_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_1_net_lof.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_1_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_100_2_net_cad.png, f1 is 0.1111111111111111, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_2_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_2_net_chb.png, f1 is 0.1818181818181818, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_2_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_100_2_net_lof.png, f1 is 0.002890173410404624, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_2_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_100_3_net_cad.png, f1 is 0.2, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_100_3_cpu_cad.png, f1 is 0.10526315789473684, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_100_3_net_chb.png, f1 is 0.30769230769230765, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_100_3_cpu_chb.png, f1 is 0.16666666666666666, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_100_3_net_lof.png, f1 is 0.005772005772005773, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_100_3_cpu_lof.png, f1 is 0.0028860028860028864, recall is 0.3333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_100_4_net_cad.png, f1 is 0.24999999999999997, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_100_4_cpu_cad.png, f1 is 0.14814814814814817, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_4_net_chb.png, f1 is 0.39999999999999997, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_100_4_cpu_chb.png, f1 is 0.30769230769230765, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_4_net_lof.png, f1 is 0.008645533141210375, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_100_4_cpu_lof.png, f1 is 0.008645533141210375, recall is 0.75
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_100_5_net_cad.png, f1 is 0.3333333333333333, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_100_5_cpu_cad.png, f1 is 0.2608695652173913, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_100_5_net_chb.png, f1 is 0.47058823529411764, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_100_5_cpu_chb.png, f1 is 0.4, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_100_5_net_lof.png, f1 is 0.011510791366906473, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_100_5_cpu_lof.png, f1 is 0.008633093525179856, recall is 0.6
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_100_6_net_cad.png, f1 is 0.3846153846153846, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_100_6_cpu_cad.png, f1 is 0.16666666666666666, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_100_6_net_chb.png, f1 is 0.5263157894736842, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_100_6_cpu_chb.png, f1 is 0.26666666666666666, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_100_6_net_lof.png, f1 is 0.014367816091954021, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_100_6_cpu_lof.png, f1 is 0.014367816091954021, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_100_7_net_cad.png, f1 is 0.41379310344827586, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_100_7_cpu_cad.png, f1 is 0.3225806451612903, recall is 0.7142857142857143
+INFO:Tester:For lof_images//LinearModel_100_7_net_chb.png, f1 is 0.5714285714285714, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_100_7_cpu_chb.png, f1 is 0.33333333333333326, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_100_7_net_lof.png, f1 is 0.017216642754662843, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_100_7_cpu_lof.png, f1 is 0.017216642754662843, recall is 0.8571428571428571
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_100_8_net_cad.png, f1 is 0.4666666666666667, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_100_8_cpu_cad.png, f1 is 0.3448275862068965, recall is 0.625
+INFO:Tester:For lof_images//LinearModel_100_8_net_chb.png, f1 is 0.608695652173913, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_100_8_cpu_chb.png, f1 is 0.4, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_8_net_lof.png, f1 is 0.020057306590257878, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_100_8_cpu_lof.png, f1 is 0.020057306590257878, recall is 0.875
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_100_9_net_cad.png, f1 is 0.5333333333333333, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_100_9_cpu_cad.png, f1 is 0.3870967741935484, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_100_9_net_chb.png, f1 is 0.64, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_100_9_cpu_chb.png, f1 is 0.4761904761904762, recall is 0.5555555555555556
+INFO:Tester:For lof_images//LinearModel_100_9_net_lof.png, f1 is 0.022889842632331906, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_100_9_cpu_lof.png, f1 is 0.022889842632331906, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_100_10_net_cad.png, f1 is 0.5000000000000001, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_100_10_cpu_cad.png, f1 is 0.3125, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_10_net_chb.png, f1 is 0.6428571428571429, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_100_10_cpu_chb.png, f1 is 0.1904761904761905, recall is 0.2
+INFO:Tester:For lof_images//LinearModel_100_10_net_lof.png, f1 is 0.02571428571428571, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_100_10_cpu_lof.png, f1 is 0.02, recall is 0.7
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_100_11_net_cad.png, f1 is 0.5882352941176471, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_100_11_cpu_cad.png, f1 is 0.5142857142857142, recall is 0.8181818181818182
+INFO:Tester:For lof_images//LinearModel_100_11_net_chb.png, f1 is 0.6896551724137931, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_100_11_cpu_chb.png, f1 is 0.43478260869565216, recall is 0.45454545454545453
+INFO:Tester:For lof_images//LinearModel_100_11_net_lof.png, f1 is 0.028530670470756064, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_100_11_cpu_lof.png, f1 is 0.028530670470756064, recall is 0.9090909090909091
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_100_12_net_cad.png, f1 is 0.6470588235294118, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_100_12_cpu_cad.png, f1 is 0.5128205128205128, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_100_12_net_chb.png, f1 is 0.7096774193548387, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_100_12_cpu_chb.png, f1 is 0.3333333333333333, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_100_12_net_lof.png, f1 is 0.031339031339031334, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_100_12_cpu_lof.png, f1 is 0.031339031339031334, recall is 0.9166666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_100_13_net_cad.png, f1 is 0.6486486486486487, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_100_13_cpu_cad.png, f1 is 0.45, recall is 0.6923076923076923
+INFO:Tester:For lof_images//LinearModel_100_13_net_chb.png, f1 is 0.7272727272727274, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_100_13_cpu_chb.png, f1 is 0.33333333333333337, recall is 0.3076923076923077
+INFO:Tester:For lof_images//LinearModel_100_13_net_lof.png, f1 is 0.034139402560455195, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_100_13_cpu_lof.png, f1 is 0.031294452347083924, recall is 0.8461538461538461
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_100_14_net_cad.png, f1 is 0.6842105263157894, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_100_14_cpu_cad.png, f1 is 0.5454545454545455, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_100_14_net_chb.png, f1 is 0.7647058823529412, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_100_14_cpu_chb.png, f1 is 0.5517241379310344, recall is 0.5714285714285714
+INFO:Tester:For lof_images//LinearModel_100_14_net_lof.png, f1 is 0.036931818181818184, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_100_14_cpu_lof.png, f1 is 0.036931818181818184, recall is 0.9285714285714286
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_100_15_net_cad.png, f1 is 0.6666666666666667, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_100_15_cpu_cad.png, f1 is 0.5909090909090909, recall is 0.8666666666666667
+INFO:Tester:For lof_images//LinearModel_100_15_net_chb.png, f1 is 0.7567567567567568, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_100_15_cpu_chb.png, f1 is 0.4827586206896552, recall is 0.4666666666666667
+INFO:Tester:For lof_images//LinearModel_100_15_net_lof.png, f1 is 0.03971631205673759, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_100_15_cpu_lof.png, f1 is 0.03971631205673759, recall is 0.9333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_100_16_net_cad.png, f1 is 0.6818181818181818, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_100_16_cpu_cad.png, f1 is 0.6222222222222222, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_100_16_net_chb.png, f1 is 0.75, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_100_16_cpu_chb.png, f1 is 0.5, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_100_16_net_lof.png, f1 is 0.042492917847025496, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_100_16_cpu_lof.png, f1 is 0.03966005665722379, recall is 0.875
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_100_17_net_cad.png, f1 is 0.7272727272727272, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_100_17_cpu_cad.png, f1 is 0.5957446808510638, recall is 0.8235294117647058
+INFO:Tester:For lof_images//LinearModel_100_17_net_chb.png, f1 is 0.7804878048780487, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_100_17_cpu_chb.png, f1 is 0.22222222222222224, recall is 0.17647058823529413
+INFO:Tester:For lof_images//LinearModel_100_17_net_lof.png, f1 is 0.04526166902404526, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_100_17_cpu_lof.png, f1 is 0.04526166902404526, recall is 0.9411764705882353
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_100_18_net_cad.png, f1 is 0.7083333333333334, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_100_18_cpu_cad.png, f1 is 0.6153846153846153, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_100_18_net_chb.png, f1 is 0.7727272727272727, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_100_18_cpu_chb.png, f1 is 0.33333333333333337, recall is 0.2777777777777778
+INFO:Tester:For lof_images//LinearModel_100_18_net_lof.png, f1 is 0.0480225988700565, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_100_18_cpu_lof.png, f1 is 0.0423728813559322, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_100_19_net_cad.png, f1 is 0.72, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_100_19_cpu_cad.png, f1 is 0.5714285714285714, recall is 0.7368421052631579
+INFO:Tester:For lof_images//LinearModel_100_19_net_chb.png, f1 is 0.7999999999999999, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_100_19_cpu_chb.png, f1 is 0.26666666666666666, recall is 0.21052631578947367
+INFO:Tester:For lof_images//LinearModel_100_19_net_lof.png, f1 is 0.0535966149506347, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_100_19_cpu_lof.png, f1 is 0.045133991537376586, recall is 0.8421052631578947
+INFO:Tester:Starting tests with LinearModel_10
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_10_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_1_net_lof.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_1_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_10_2_net_cad.png, f1 is 0.09999999999999999, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_10_2_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_2_net_chb.png, f1 is 0.25, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_10_2_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_2_net_lof.png, f1 is 0.0028530670470756064, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_10_2_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_10_3_net_cad.png, f1 is 0.1904761904761905, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_10_3_cpu_cad.png, f1 is 0.08695652173913045, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_10_3_net_chb.png, f1 is 0.4, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_10_3_cpu_chb.png, f1 is 0.25, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_10_3_net_lof.png, f1 is 0.005698005698005698, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_10_3_cpu_lof.png, f1 is 0.005698005698005698, recall is 0.6666666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_10_4_net_cad.png, f1 is 0.24999999999999997, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_10_4_cpu_cad.png, f1 is 0.07692307692307693, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_10_4_net_chb.png, f1 is 0.5, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_10_4_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_10_4_net_lof.png, f1 is 0.008534850640113799, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_10_4_cpu_lof.png, f1 is 0.005689900426742531, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_10_5_net_cad.png, f1 is 0.3333333333333333, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_10_5_cpu_cad.png, f1 is 0.22222222222222218, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_10_5_net_chb.png, f1 is 0.5714285714285714, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_10_5_cpu_chb.png, f1 is 0.3333333333333333, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_10_5_net_lof.png, f1 is 0.011363636363636364, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_10_5_cpu_lof.png, f1 is 0.011363636363636364, recall is 0.8
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_10_6_net_cad.png, f1 is 0.3846153846153846, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_10_6_cpu_cad.png, f1 is 0.27586206896551724, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_10_6_net_chb.png, f1 is 0.625, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_10_6_cpu_chb.png, f1 is 0.30769230769230765, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_10_6_net_lof.png, f1 is 0.014184397163120567, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_10_6_cpu_lof.png, f1 is 0.014164305949008497, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_10_7_net_cad.png, f1 is 0.42857142857142855, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_10_7_cpu_cad.png, f1 is 0.2, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_10_7_net_chb.png, f1 is 0.6666666666666665, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_10_7_cpu_chb.png, f1 is 0.30769230769230765, recall is 0.2857142857142857
+INFO:Tester:For lof_images//LinearModel_10_7_net_lof.png, f1 is 0.0169971671388102, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_10_7_cpu_lof.png, f1 is 0.014164305949008499, recall is 0.7142857142857143
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_10_8_net_cad.png, f1 is 0.4666666666666667, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_10_8_cpu_cad.png, f1 is 0.26666666666666666, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_10_8_net_chb.png, f1 is 0.7000000000000001, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_10_8_cpu_chb.png, f1 is 0.28571428571428575, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_10_8_net_lof.png, f1 is 0.019801980198019802, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_10_8_cpu_lof.png, f1 is 0.019801980198019802, recall is 0.875
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_10_9_net_cad.png, f1 is 0.5517241379310346, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_10_9_cpu_cad.png, f1 is 0.3428571428571429, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_10_9_net_chb.png, f1 is 0.7272727272727274, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_10_9_cpu_chb.png, f1 is 0.375, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_10_9_net_lof.png, f1 is 0.02259887005649718, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_10_9_cpu_lof.png, f1 is 0.02259887005649718, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_10_10_net_cad.png, f1 is 0.5294117647058825, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_10_10_cpu_cad.png, f1 is 0.37837837837837834, recall is 0.7
+INFO:Tester:For lof_images//LinearModel_10_10_net_chb.png, f1 is 0.75, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_10_10_cpu_chb.png, f1 is 0.25, recall is 0.2
+INFO:Tester:For lof_images//LinearModel_10_10_net_lof.png, f1 is 0.025387870239774332, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_10_10_cpu_lof.png, f1 is 0.025387870239774332, recall is 0.9
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_10_11_net_cad.png, f1 is 0.5714285714285715, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_10_11_cpu_cad.png, f1 is 0.4, recall is 0.7272727272727273
+INFO:Tester:For lof_images//LinearModel_10_11_net_chb.png, f1 is 0.7692307692307692, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_10_11_cpu_chb.png, f1 is 0.4210526315789474, recall is 0.36363636363636365
+INFO:Tester:For lof_images//LinearModel_10_11_net_lof.png, f1 is 0.02816901408450704, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_10_11_cpu_lof.png, f1 is 0.025352112676056335, recall is 0.8181818181818182
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_10_12_net_cad.png, f1 is 0.5789473684210527, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_10_12_cpu_cad.png, f1 is 0.4090909090909091, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_10_12_net_chb.png, f1 is 0.7857142857142857, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_10_12_cpu_chb.png, f1 is 0.380952380952381, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_10_12_net_lof.png, f1 is 0.030942334739803096, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_10_12_cpu_lof.png, f1 is 0.030942334739803096, recall is 0.9166666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_10_13_net_cad.png, f1 is 0.6, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_10_13_cpu_cad.png, f1 is 0.47619047619047616, recall is 0.7692307692307693
+INFO:Tester:For lof_images//LinearModel_10_13_net_chb.png, f1 is 0.8000000000000002, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_10_13_cpu_chb.png, f1 is 0.3, recall is 0.23076923076923078
+INFO:Tester:For lof_images//LinearModel_10_13_net_lof.png, f1 is 0.03651685393258427, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_10_13_cpu_lof.png, f1 is 0.03651685393258427, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_10_14_net_cad.png, f1 is 0.6341463414634146, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_10_14_cpu_cad.png, f1 is 0.5217391304347825, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_10_14_net_chb.png, f1 is 0.8125000000000001, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_10_14_cpu_chb.png, f1 is 0.2727272727272727, recall is 0.21428571428571427
+INFO:Tester:For lof_images//LinearModel_10_14_net_lof.png, f1 is 0.0364656381486676, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_10_14_cpu_lof.png, f1 is 0.0364656381486676, recall is 0.9285714285714286
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_10_15_net_cad.png, f1 is 0.65, recall is 0.8666666666666667
+INFO:Tester:For lof_images//LinearModel_10_15_cpu_cad.png, f1 is 0.5416666666666666, recall is 0.8666666666666667
+INFO:Tester:For lof_images//LinearModel_10_15_net_chb.png, f1 is 0.8235294117647058, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_10_15_cpu_chb.png, f1 is 0.43478260869565216, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_10_15_net_lof.png, f1 is 0.0392156862745098, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_10_15_cpu_lof.png, f1 is 0.0392156862745098, recall is 0.9333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_10_16_net_cad.png, f1 is 0.6521739130434783, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_10_16_cpu_cad.png, f1 is 0.5531914893617021, recall is 0.8125
+INFO:Tester:For lof_images//LinearModel_10_16_net_chb.png, f1 is 0.8333333333333334, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_10_16_cpu_chb.png, f1 is 0.5517241379310345, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_10_16_net_lof.png, f1 is 0.04195804195804196, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_10_16_cpu_lof.png, f1 is 0.04195804195804196, recall is 0.9375
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_10_17_net_cad.png, f1 is 0.6666666666666667, recall is 0.8823529411764706
+INFO:Tester:For lof_images//LinearModel_10_17_cpu_cad.png, f1 is 0.625, recall is 0.8823529411764706
+INFO:Tester:For lof_images//LinearModel_10_17_net_chb.png, f1 is 0.8421052631578947, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_10_17_cpu_chb.png, f1 is 0.45161290322580644, recall is 0.4117647058823529
+INFO:Tester:For lof_images//LinearModel_10_17_net_lof.png, f1 is 0.044692737430167606, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_10_17_cpu_lof.png, f1 is 0.044692737430167606, recall is 0.9411764705882353
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_10_18_net_cad.png, f1 is 0.7555555555555556, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_10_18_cpu_cad.png, f1 is 0.6274509803921569, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_10_18_net_chb.png, f1 is 0.85, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_10_18_cpu_chb.png, f1 is 0.3846153846153846, recall is 0.2777777777777778
+INFO:Tester:For lof_images//LinearModel_10_18_net_lof.png, f1 is 0.04741980474198048, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_10_18_cpu_lof.png, f1 is 0.04463040446304045, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_10_19_net_cad.png, f1 is 0.7391304347826088, recall is 0.8947368421052632
+INFO:Tester:For lof_images//LinearModel_10_19_cpu_cad.png, f1 is 0.6086956521739131, recall is 0.7368421052631579
+INFO:Tester:For lof_images//LinearModel_10_19_net_chb.png, f1 is 0.8571428571428571, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_10_19_cpu_chb.png, f1 is 0.41379310344827586, recall is 0.3157894736842105
+INFO:Tester:For lof_images//LinearModel_10_19_net_lof.png, f1 is 0.05013927576601672, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_10_19_cpu_lof.png, f1 is 0.04456824512534819, recall is 0.8421052631578947
+INFO:Tester:Starting tests with LinearModel_5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_5_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_1_net_lof.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_1_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_5_2_net_cad.png, f1 is 0.14285714285714285, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_5_2_cpu_cad.png, f1 is 0.1111111111111111, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_5_2_net_chb.png, f1 is 0.25, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_5_2_cpu_chb.png, f1 is 0.22222222222222224, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_5_2_net_lof.png, f1 is 0.0028490028490028487, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_5_2_cpu_lof.png, f1 is 0.0028490028490028487, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_5_3_net_cad.png, f1 is 0.25, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_5_3_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_3_net_chb.png, f1 is 0.4, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_5_3_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_5_3_net_lof.png, f1 is 0.008534850640113799, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_5_3_cpu_lof.png, f1 is 0.002844950213371266, recall is 0.3333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_5_4_net_cad.png, f1 is 0.3333333333333333, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_4_cpu_cad.png, f1 is 0.11111111111111112, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_5_4_net_chb.png, f1 is 0.5, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_4_cpu_chb.png, f1 is 0.2, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_5_4_net_lof.png, f1 is 0.008522727272727274, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_4_cpu_lof.png, f1 is 0.005681818181818181, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_5_5_net_cad.png, f1 is 0.4, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_5_5_cpu_cad.png, f1 is 0.2, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_5_5_net_chb.png, f1 is 0.5714285714285714, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_5_5_cpu_chb.png, f1 is 0.2857142857142857, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_5_5_net_lof.png, f1 is 0.011347517730496455, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_5_5_cpu_lof.png, f1 is 0.005673758865248227, recall is 0.4
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_5_6_net_cad.png, f1 is 0.45454545454545453, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_5_6_cpu_cad.png, f1 is 0.3809523809523809, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_5_6_net_chb.png, f1 is 0.625, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_5_6_cpu_chb.png, f1 is 0.5333333333333333, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_5_6_net_lof.png, f1 is 0.014164305949008497, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_5_6_cpu_lof.png, f1 is 0.014164305949008497, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_5_7_net_cad.png, f1 is 0.5454545454545455, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_5_7_cpu_cad.png, f1 is 0.26086956521739124, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_5_7_net_chb.png, f1 is 0.6666666666666665, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_5_7_cpu_chb.png, f1 is 0.375, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_5_7_net_lof.png, f1 is 0.016973125884016973, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_5_7_cpu_lof.png, f1 is 0.008486562942008486, recall is 0.42857142857142855
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_5_8_net_cad.png, f1 is 0.56, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_5_8_cpu_cad.png, f1 is 0.4285714285714285, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_8_net_chb.png, f1 is 0.7000000000000001, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_5_8_cpu_chb.png, f1 is 0.6363636363636364, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_5_8_net_lof.png, f1 is 0.02259887005649718, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_5_8_cpu_lof.png, f1 is 0.02259887005649718, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_5_9_net_cad.png, f1 is 0.6153846153846153, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_5_9_cpu_cad.png, f1 is 0.5, recall is 0.7777777777777778
+INFO:Tester:For lof_images//LinearModel_5_9_net_chb.png, f1 is 0.7272727272727274, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_5_9_cpu_chb.png, f1 is 0.6666666666666666, recall is 0.7777777777777778
+INFO:Tester:For lof_images//LinearModel_5_9_net_lof.png, f1 is 0.022566995768688293, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_5_9_cpu_lof.png, f1 is 0.022566995768688293, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_5_10_net_cad.png, f1 is 0.6206896551724138, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_5_10_cpu_cad.png, f1 is 0.5517241379310345, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_5_10_net_chb.png, f1 is 0.75, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_5_10_cpu_chb.png, f1 is 0.75, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_5_10_net_lof.png, f1 is 0.025352112676056335, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_5_10_cpu_lof.png, f1 is 0.025352112676056335, recall is 0.9
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_5_11_net_cad.png, f1 is 0.6451612903225806, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_5_11_cpu_cad.png, f1 is 0.5806451612903226, recall is 0.8181818181818182
+INFO:Tester:For lof_images//LinearModel_5_11_net_chb.png, f1 is 0.7692307692307692, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_5_11_cpu_chb.png, f1 is 0.7200000000000001, recall is 0.8181818181818182
+INFO:Tester:For lof_images//LinearModel_5_11_net_lof.png, f1 is 0.030942334739803096, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_5_11_cpu_lof.png, f1 is 0.028129395218002815, recall is 0.9090909090909091
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_5_12_net_cad.png, f1 is 0.6874999999999999, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_5_12_cpu_cad.png, f1 is 0.5882352941176471, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_5_12_net_chb.png, f1 is 0.7857142857142857, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_5_12_cpu_chb.png, f1 is 0.6923076923076924, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_12_net_lof.png, f1 is 0.030898876404494385, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_5_12_cpu_lof.png, f1 is 0.030898876404494385, recall is 0.9166666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_5_13_net_cad.png, f1 is 0.7058823529411765, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_5_13_cpu_cad.png, f1 is 0.5806451612903226, recall is 0.6923076923076923
+INFO:Tester:For lof_images//LinearModel_5_13_net_chb.png, f1 is 0.8000000000000002, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_5_13_cpu_chb.png, f1 is 0.7142857142857142, recall is 0.7692307692307693
+INFO:Tester:For lof_images//LinearModel_5_13_net_lof.png, f1 is 0.033660589060308554, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_5_13_cpu_lof.png, f1 is 0.028050490883590466, recall is 0.7692307692307693
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_5_14_net_cad.png, f1 is 0.742857142857143, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_5_14_cpu_cad.png, f1 is 0.6486486486486486, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_5_14_net_chb.png, f1 is 0.8125000000000001, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_5_14_cpu_chb.png, f1 is 0.7096774193548386, recall is 0.7857142857142857
+INFO:Tester:For lof_images//LinearModel_5_14_net_lof.png, f1 is 0.036414565826330535, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_5_14_cpu_lof.png, f1 is 0.036414565826330535, recall is 0.9285714285714286
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_5_15_net_cad.png, f1 is 0.7567567567567568, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_5_15_cpu_cad.png, f1 is 0.5789473684210527, recall is 0.7333333333333333
+INFO:Tester:For lof_images//LinearModel_5_15_net_chb.png, f1 is 0.8235294117647058, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_5_15_cpu_chb.png, f1 is 0.7096774193548386, recall is 0.7333333333333333
+INFO:Tester:For lof_images//LinearModel_5_15_net_lof.png, f1 is 0.039160839160839164, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_5_15_cpu_lof.png, f1 is 0.033566433566433566, recall is 0.8
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_5_16_net_cad.png, f1 is 0.7692307692307693, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_5_16_cpu_cad.png, f1 is 0.6, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_16_net_chb.png, f1 is 0.8333333333333334, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_5_16_cpu_chb.png, f1 is 0.7058823529411765, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_5_16_net_lof.png, f1 is 0.04189944134078213, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_5_16_cpu_lof.png, f1 is 0.036312849162011177, recall is 0.8125
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_5_17_net_cad.png, f1 is 0.7804878048780487, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_5_17_cpu_cad.png, f1 is 0.7317073170731708, recall is 0.8823529411764706
+INFO:Tester:For lof_images//LinearModel_5_17_net_chb.png, f1 is 0.8421052631578947, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_5_17_cpu_chb.png, f1 is 0.8108108108108107, recall is 0.8823529411764706
+INFO:Tester:For lof_images//LinearModel_5_17_net_lof.png, f1 is 0.044630404463040445, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_5_17_cpu_lof.png, f1 is 0.044630404463040445, recall is 0.9411764705882353
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_5_18_net_cad.png, f1 is 0.7727272727272727, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_5_18_cpu_cad.png, f1 is 0.6222222222222222, recall is 0.7777777777777778
+INFO:Tester:For lof_images//LinearModel_5_18_net_chb.png, f1 is 0.85, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_5_18_cpu_chb.png, f1 is 0.7567567567567567, recall is 0.7777777777777778
+INFO:Tester:For lof_images//LinearModel_5_18_net_lof.png, f1 is 0.04735376044568245, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_5_18_cpu_lof.png, f1 is 0.04178272980501393, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_5_19_net_cad.png, f1 is 0.7999999999999999, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_5_19_cpu_cad.png, f1 is 0.6956521739130435, recall is 0.8421052631578947
+INFO:Tester:For lof_images//LinearModel_5_19_net_chb.png, f1 is 0.8571428571428571, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_5_19_cpu_chb.png, f1 is 0.7500000000000001, recall is 0.7894736842105263
+INFO:Tester:For lof_images//LinearModel_5_19_net_lof.png, f1 is 0.050069541029207236, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_5_19_cpu_lof.png, f1 is 0.050069541029207236, recall is 0.9473684210526315
+INFO:Tester:Starting tests with LinearModel_50
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_50_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_1_net_lof.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_1_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_50_2_net_cad.png, f1 is 0.08333333333333334, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_2_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_2_net_chb.png, f1 is 0.22222222222222224, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_2_cpu_chb.png, f1 is 0.22222222222222224, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_2_net_lof.png, f1 is 0.0028694404591104736, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_2_cpu_lof.png, f1 is 0.0028694404591104736, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_50_3_net_cad.png, f1 is 0.1739130434782609, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_50_3_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_3_net_chb.png, f1 is 0.36363636363636365, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_50_3_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_50_3_net_lof.png, f1 is 0.0057306590257879654, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_50_3_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_50_4_net_cad.png, f1 is 0.2608695652173913, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_50_4_cpu_cad.png, f1 is 0.23076923076923075, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_50_4_net_chb.png, f1 is 0.46153846153846156, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_50_4_cpu_chb.png, f1 is 0.5, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_50_4_net_lof.png, f1 is 0.011444921316165951, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_50_4_cpu_lof.png, f1 is 0.011444921316165951, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_50_5_net_cad.png, f1 is 0.2962962962962963, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_50_5_cpu_cad.png, f1 is 0.23076923076923073, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_50_5_net_chb.png, f1 is 0.5333333333333333, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_50_5_cpu_chb.png, f1 is 0.4615384615384615, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_50_5_net_lof.png, f1 is 0.014285714285714287, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_50_5_cpu_lof.png, f1 is 0.014285714285714287, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_50_6_net_cad.png, f1 is 0.35714285714285715, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_50_6_cpu_cad.png, f1 is 0.28571428571428575, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_50_6_net_chb.png, f1 is 0.5882352941176471, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_50_6_cpu_chb.png, f1 is 0.30769230769230765, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_50_6_net_lof.png, f1 is 0.014265335235378034, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_50_6_cpu_lof.png, f1 is 0.014265335235378034, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_50_7_net_cad.png, f1 is 0.3333333333333333, recall is 0.7142857142857143
+INFO:Tester:For lof_images//LinearModel_50_7_cpu_cad.png, f1 is 0.1875, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_50_7_net_chb.png, f1 is 0.631578947368421, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_50_7_cpu_chb.png, f1 is 0.39999999999999997, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_50_7_net_lof.png, f1 is 0.017094017094017092, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_50_7_cpu_lof.png, f1 is 0.011396011396011397, recall is 0.5714285714285714
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_50_8_net_cad.png, f1 is 0.4516129032258065, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_50_8_cpu_cad.png, f1 is 0.26666666666666666, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_8_net_chb.png, f1 is 0.6666666666666667, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_50_8_cpu_chb.png, f1 is 0.375, recall is 0.375
+INFO:Tester:For lof_images//LinearModel_50_8_net_lof.png, f1 is 0.01991465149359886, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_50_8_cpu_lof.png, f1 is 0.01422475106685633, recall is 0.625
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_50_9_net_cad.png, f1 is 0.5333333333333333, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_50_9_cpu_cad.png, f1 is 0.3243243243243243, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_50_9_net_chb.png, f1 is 0.7272727272727274, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_50_9_cpu_chb.png, f1 is 0.5714285714285715, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_50_9_net_lof.png, f1 is 0.025568181818181816, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_50_9_cpu_lof.png, f1 is 0.022727272727272728, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_50_10_net_cad.png, f1 is 0.5625000000000001, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_50_10_cpu_cad.png, f1 is 0.32432432432432434, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_50_10_net_chb.png, f1 is 0.75, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_50_10_cpu_chb.png, f1 is 0.5454545454545454, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_50_10_net_lof.png, f1 is 0.02553191489361702, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_50_10_cpu_lof.png, f1 is 0.022695035460992906, recall is 0.8
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_50_11_net_cad.png, f1 is 0.5263157894736842, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_50_11_cpu_cad.png, f1 is 0.4102564102564102, recall is 0.7272727272727273
+INFO:Tester:For lof_images//LinearModel_50_11_net_chb.png, f1 is 0.7407407407407406, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_50_11_cpu_chb.png, f1 is 0.39999999999999997, recall is 0.36363636363636365
+INFO:Tester:For lof_images//LinearModel_50_11_net_lof.png, f1 is 0.028328611898016998, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_50_11_cpu_lof.png, f1 is 0.025495750708215296, recall is 0.8181818181818182
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_50_12_net_cad.png, f1 is 0.55, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_50_12_cpu_cad.png, f1 is 0.45454545454545453, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_50_12_net_chb.png, f1 is 0.7586206896551724, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_50_12_cpu_chb.png, f1 is 0.43478260869565216, recall is 0.4166666666666667
+INFO:Tester:For lof_images//LinearModel_50_12_net_lof.png, f1 is 0.031117397454031116, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_50_12_cpu_lof.png, f1 is 0.02828854314002829, recall is 0.8333333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_50_13_net_cad.png, f1 is 0.6, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_50_13_cpu_cad.png, f1 is 0.380952380952381, recall is 0.6153846153846154
+INFO:Tester:For lof_images//LinearModel_50_13_net_chb.png, f1 is 0.7741935483870968, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_50_13_cpu_chb.png, f1 is 0.41666666666666663, recall is 0.38461538461538464
+INFO:Tester:For lof_images//LinearModel_50_13_net_lof.png, f1 is 0.03389830508474576, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_50_13_cpu_lof.png, f1 is 0.02824858757062147, recall is 0.7692307692307693
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_50_14_net_cad.png, f1 is 0.6046511627906977, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_50_14_cpu_cad.png, f1 is 0.43478260869565216, recall is 0.7142857142857143
+INFO:Tester:For lof_images//LinearModel_50_14_net_chb.png, f1 is 0.7878787878787878, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_50_14_cpu_chb.png, f1 is 0.41666666666666663, recall is 0.35714285714285715
+INFO:Tester:For lof_images//LinearModel_50_14_net_lof.png, f1 is 0.036671368124118475, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_50_14_cpu_lof.png, f1 is 0.033850493653032436, recall is 0.8571428571428571
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_50_15_net_cad.png, f1 is 0.608695652173913, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_50_15_cpu_cad.png, f1 is 0.48000000000000004, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_50_15_net_chb.png, f1 is 0.8, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_50_15_cpu_chb.png, f1 is 0.4444444444444445, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_50_15_net_lof.png, f1 is 0.04225352112676056, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_50_15_cpu_lof.png, f1 is 0.04225352112676056, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_50_16_net_cad.png, f1 is 0.6382978723404255, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_50_16_cpu_cad.png, f1 is 0.5306122448979591, recall is 0.8125
+INFO:Tester:For lof_images//LinearModel_50_16_net_chb.png, f1 is 0.8108108108108109, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_50_16_cpu_chb.png, f1 is 0.5517241379310345, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_16_net_lof.png, f1 is 0.042194092827004225, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_50_16_cpu_lof.png, f1 is 0.03938115330520394, recall is 0.875
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_50_17_net_cad.png, f1 is 0.6666666666666666, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_50_17_cpu_cad.png, f1 is 0.5283018867924528, recall is 0.8235294117647058
+INFO:Tester:For lof_images//LinearModel_50_17_net_chb.png, f1 is 0.8205128205128205, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_50_17_cpu_chb.png, f1 is 0.41379310344827586, recall is 0.35294117647058826
+INFO:Tester:For lof_images//LinearModel_50_17_net_lof.png, f1 is 0.0449438202247191, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_50_17_cpu_lof.png, f1 is 0.04213483146067416, recall is 0.8823529411764706
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_50_18_net_cad.png, f1 is 0.6538461538461539, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_50_18_cpu_cad.png, f1 is 0.5882352941176471, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_50_18_net_chb.png, f1 is 0.8292682926829269, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_50_18_cpu_chb.png, f1 is 0.5625000000000001, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_50_18_net_lof.png, f1 is 0.047685834502103785, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_50_18_cpu_lof.png, f1 is 0.047685834502103785, recall is 0.9444444444444444
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_50_19_net_cad.png, f1 is 0.679245283018868, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_50_19_cpu_cad.png, f1 is 0.5357142857142857, recall is 0.7894736842105263
+INFO:Tester:For lof_images//LinearModel_50_19_net_chb.png, f1 is 0.8372093023255814, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_50_19_cpu_chb.png, f1 is 0.48484848484848486, recall is 0.42105263157894735
+INFO:Tester:For lof_images//LinearModel_50_19_net_lof.png, f1 is 0.05042016806722689, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_50_19_cpu_lof.png, f1 is 0.04761904761904762, recall is 0.8947368421052632
+INFO:Tester:Starting tests with LinearModel_200
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 1
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 1
+INFO:Tester:For lof_images//LinearModel_200_1_net_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_1_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_1_net_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_1_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_1_net_lof.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_1_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 2
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 2
+INFO:Tester:For lof_images//LinearModel_200_2_net_cad.png, f1 is 0.09090909090909091, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_2_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_2_net_chb.png, f1 is 0.1818181818181818, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_2_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_2_net_lof.png, f1 is 0.002932551319648094, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_2_cpu_lof.png, f1 is 0.0, recall is 0.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 3
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 3
+INFO:Tester:For lof_images//LinearModel_200_3_net_cad.png, f1 is 0.1904761904761905, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_200_3_cpu_cad.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_3_net_chb.png, f1 is 0.30769230769230765, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_200_3_cpu_chb.png, f1 is 0.0, recall is 0.0
+INFO:Tester:For lof_images//LinearModel_200_3_net_lof.png, f1 is 0.005856515373352855, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_200_3_cpu_lof.png, f1 is 0.0029282576866764276, recall is 0.3333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 4
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 4
+INFO:Tester:For lof_images//LinearModel_200_4_net_cad.png, f1 is 0.2608695652173913, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_200_4_cpu_cad.png, f1 is 0.1818181818181818, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_4_net_chb.png, f1 is 0.39999999999999997, recall is 0.75
+INFO:Tester:For lof_images//LinearModel_200_4_cpu_chb.png, f1 is 0.30769230769230765, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_4_net_lof.png, f1 is 0.011695906432748537, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_200_4_cpu_lof.png, f1 is 0.011695906432748537, recall is 1.0
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 5
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 5
+INFO:Tester:For lof_images//LinearModel_200_5_net_cad.png, f1 is 0.22222222222222218, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_200_5_cpu_cad.png, f1 is 0.16000000000000003, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_200_5_net_chb.png, f1 is 0.47058823529411764, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_200_5_cpu_chb.png, f1 is 0.2857142857142857, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_200_5_net_lof.png, f1 is 0.011678832116788322, recall is 0.8
+INFO:Tester:For lof_images//LinearModel_200_5_cpu_lof.png, f1 is 0.008759124087591242, recall is 0.6
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 6
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 6
+INFO:Tester:For lof_images//LinearModel_200_6_net_cad.png, f1 is 0.33333333333333337, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_200_6_cpu_cad.png, f1 is 0.22222222222222224, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_6_net_chb.png, f1 is 0.5263157894736842, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_200_6_cpu_chb.png, f1 is 0.26666666666666666, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_200_6_net_lof.png, f1 is 0.014577259475218658, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_200_6_cpu_lof.png, f1 is 0.011661807580174929, recall is 0.6666666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 7
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 7
+INFO:Tester:For lof_images//LinearModel_200_7_net_cad.png, f1 is 0.41379310344827586, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_200_7_cpu_cad.png, f1 is 0.2857142857142857, recall is 0.5714285714285714
+INFO:Tester:For lof_images//LinearModel_200_7_net_chb.png, f1 is 0.5714285714285714, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_200_7_cpu_chb.png, f1 is 0.33333333333333326, recall is 0.42857142857142855
+INFO:Tester:For lof_images//LinearModel_200_7_net_lof.png, f1 is 0.017467248908296942, recall is 0.8571428571428571
+INFO:Tester:For lof_images//LinearModel_200_7_cpu_lof.png, f1 is 0.011644832605531296, recall is 0.5714285714285714
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 8
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 8
+INFO:Tester:For lof_images//LinearModel_200_8_net_cad.png, f1 is 0.411764705882353, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_200_8_cpu_cad.png, f1 is 0.26666666666666666, recall is 0.5
+INFO:Tester:For lof_images//LinearModel_200_8_net_chb.png, f1 is 0.608695652173913, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_200_8_cpu_chb.png, f1 is 0.23529411764705882, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_200_8_net_lof.png, f1 is 0.020348837209302324, recall is 0.875
+INFO:Tester:For lof_images//LinearModel_200_8_cpu_lof.png, f1 is 0.011627906976744186, recall is 0.5
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 9
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 9
+INFO:Tester:For lof_images//LinearModel_200_9_net_cad.png, f1 is 0.4571428571428572, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_200_9_cpu_cad.png, f1 is 0.3428571428571429, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_200_9_net_chb.png, f1 is 0.64, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_200_9_cpu_chb.png, f1 is 0.2222222222222222, recall is 0.2222222222222222
+INFO:Tester:For lof_images//LinearModel_200_9_net_lof.png, f1 is 0.023222060957910014, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_200_9_cpu_lof.png, f1 is 0.017416545718432513, recall is 0.6666666666666666
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 10
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 10
+INFO:Tester:For lof_images//LinearModel_200_10_net_cad.png, f1 is 0.4736842105263158, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_200_10_cpu_cad.png, f1 is 0.37837837837837834, recall is 0.7
+INFO:Tester:For lof_images//LinearModel_200_10_net_chb.png, f1 is 0.6666666666666667, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_200_10_cpu_chb.png, f1 is 0.380952380952381, recall is 0.4
+INFO:Tester:For lof_images//LinearModel_200_10_net_lof.png, f1 is 0.02608695652173913, recall is 0.9
+INFO:Tester:For lof_images//LinearModel_200_10_cpu_lof.png, f1 is 0.020289855072463767, recall is 0.7
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 11
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 11
+INFO:Tester:For lof_images//LinearModel_200_11_net_cad.png, f1 is 0.5000000000000001, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_200_11_cpu_cad.png, f1 is 0.38095238095238093, recall is 0.7272727272727273
+INFO:Tester:For lof_images//LinearModel_200_11_net_chb.png, f1 is 0.6896551724137931, recall is 0.9090909090909091
+INFO:Tester:For lof_images//LinearModel_200_11_cpu_chb.png, f1 is 0.28571428571428564, recall is 0.2727272727272727
+INFO:Tester:For lof_images//LinearModel_200_11_net_lof.png, f1 is 0.031837916063675836, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_200_11_cpu_lof.png, f1 is 0.028943560057887122, recall is 0.9090909090909091
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 12
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 12
+INFO:Tester:For lof_images//LinearModel_200_12_net_cad.png, f1 is 0.5, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_200_12_cpu_cad.png, f1 is 0.41025641025641024, recall is 0.6666666666666666
+INFO:Tester:For lof_images//LinearModel_200_12_net_chb.png, f1 is 0.7096774193548387, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_200_12_cpu_chb.png, f1 is 0.34782608695652173, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_200_12_net_lof.png, f1 is 0.03179190751445087, recall is 0.9166666666666666
+INFO:Tester:For lof_images//LinearModel_200_12_cpu_lof.png, f1 is 0.02023121387283237, recall is 0.5833333333333334
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 13
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 13
+INFO:Tester:For lof_images//LinearModel_200_13_net_cad.png, f1 is 0.5581395348837209, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_200_13_cpu_cad.png, f1 is 0.4444444444444445, recall is 0.7692307692307693
+INFO:Tester:For lof_images//LinearModel_200_13_net_chb.png, f1 is 0.7058823529411765, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_200_13_cpu_chb.png, f1 is 0.17391304347826086, recall is 0.15384615384615385
+INFO:Tester:For lof_images//LinearModel_200_13_net_lof.png, f1 is 0.03463203463203463, recall is 0.9230769230769231
+INFO:Tester:For lof_images//LinearModel_200_13_cpu_lof.png, f1 is 0.03463203463203463, recall is 0.9230769230769231
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 14
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 14
+INFO:Tester:For lof_images//LinearModel_200_14_net_cad.png, f1 is 0.5652173913043478, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_200_14_cpu_cad.png, f1 is 0.4186046511627907, recall is 0.6428571428571429
+INFO:Tester:For lof_images//LinearModel_200_14_net_chb.png, f1 is 0.742857142857143, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_200_14_cpu_chb.png, f1 is 0.25, recall is 0.21428571428571427
+INFO:Tester:For lof_images//LinearModel_200_14_net_lof.png, f1 is 0.03746397694524496, recall is 0.9285714285714286
+INFO:Tester:For lof_images//LinearModel_200_14_cpu_lof.png, f1 is 0.025936599423631128, recall is 0.6428571428571429
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 15
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 15
+INFO:Tester:For lof_images//LinearModel_200_15_net_cad.png, f1 is 0.6511627906976745, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_200_15_cpu_cad.png, f1 is 0.45, recall is 0.6
+INFO:Tester:For lof_images//LinearModel_200_15_net_chb.png, f1 is 0.7567567567567568, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_200_15_cpu_chb.png, f1 is 0.3571428571428571, recall is 0.3333333333333333
+INFO:Tester:For lof_images//LinearModel_200_15_net_lof.png, f1 is 0.04028776978417266, recall is 0.9333333333333333
+INFO:Tester:For lof_images//LinearModel_200_15_cpu_lof.png, f1 is 0.031654676258992806, recall is 0.7333333333333333
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 16
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 16
+INFO:Tester:For lof_images//LinearModel_200_16_net_cad.png, f1 is 0.6666666666666667, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_200_16_cpu_cad.png, f1 is 0.45454545454545453, recall is 0.625
+INFO:Tester:For lof_images//LinearModel_200_16_net_chb.png, f1 is 0.7692307692307693, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_200_16_cpu_chb.png, f1 is 0.28571428571428575, recall is 0.25
+INFO:Tester:For lof_images//LinearModel_200_16_net_lof.png, f1 is 0.04310344827586207, recall is 0.9375
+INFO:Tester:For lof_images//LinearModel_200_16_cpu_lof.png, f1 is 0.03160919540229885, recall is 0.6875
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 17
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 17
+INFO:Tester:For lof_images//LinearModel_200_17_net_cad.png, f1 is 0.6153846153846154, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_200_17_cpu_cad.png, f1 is 0.5490196078431372, recall is 0.8235294117647058
+INFO:Tester:For lof_images//LinearModel_200_17_net_chb.png, f1 is 0.7804878048780487, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_200_17_cpu_chb.png, f1 is 0.33333333333333337, recall is 0.29411764705882354
+INFO:Tester:For lof_images//LinearModel_200_17_net_lof.png, f1 is 0.04591104734576757, recall is 0.9411764705882353
+INFO:Tester:For lof_images//LinearModel_200_17_cpu_lof.png, f1 is 0.040172166427546625, recall is 0.8235294117647058
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 18
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 18
+INFO:Tester:For lof_images//LinearModel_200_18_net_cad.png, f1 is 0.6666666666666667, recall is 0.8888888888888888
+INFO:Tester:For lof_images//LinearModel_200_18_cpu_cad.png, f1 is 0.6122448979591837, recall is 0.8333333333333334
+INFO:Tester:For lof_images//LinearModel_200_18_net_chb.png, f1 is 0.7906976744186047, recall is 0.9444444444444444
+INFO:Tester:For lof_images//LinearModel_200_18_cpu_chb.png, f1 is 0.33333333333333337, recall is 0.2777777777777778
+INFO:Tester:For lof_images//LinearModel_200_18_net_lof.png, f1 is 0.05157593123209169, recall is 1.0
+INFO:Tester:For lof_images//LinearModel_200_18_cpu_lof.png, f1 is 0.045845272206303724, recall is 0.8888888888888888
+DEBUG:Tester:Running prediction on network flow attack anomaly duration 19
+DEBUG:Tester:Running prediction on CPU busy anomaly duration 19
+INFO:Tester:For lof_images//LinearModel_200_19_net_cad.png, f1 is 0.6938775510204083, recall is 0.8947368421052632
+INFO:Tester:For lof_images//LinearModel_200_19_cpu_cad.png, f1 is 0.5384615384615385, recall is 0.7368421052631579
+INFO:Tester:For lof_images//LinearModel_200_19_net_chb.png, f1 is 0.7999999999999999, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_200_19_cpu_chb.png, f1 is 0.37499999999999994, recall is 0.3157894736842105
+INFO:Tester:For lof_images//LinearModel_200_19_net_lof.png, f1 is 0.051502145922746774, recall is 0.9473684210526315
+INFO:Tester:For lof_images//LinearModel_200_19_cpu_lof.png, f1 is 0.03433476394849785, recall is 0.631578947368421
