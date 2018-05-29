@@ -1,0 +1,185 @@
+INFO:PreProcessor:Finished reading CPU usage data.
+INFO:PreProcessor:Finished reading Network TX data.
+INFO:PreProcessor:Finished reading Network RX data.
+INFO:PreProcessor:Finished reading Disk IO data.
+INFO:PreProcessor:Finished reading Context switching data.
+INFO:PreProcessor:Dataset for node 1 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 2 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 3 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 4 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 5 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 6 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 7 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 8 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 9 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 10 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 11 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 12 created with shape (68300, 29)
+DEBUG:PreProcessor:Column 0 is cpu_value host bb1localdomain type_instance idle
+DEBUG:PreProcessor:Column 1 is cpu_value host bb1localdomain type_instance interrupt
+DEBUG:PreProcessor:Column 2 is cpu_value host bb1localdomain type_instance nice
+DEBUG:PreProcessor:Column 3 is cpu_value host bb1localdomain type_instance softirq
+DEBUG:PreProcessor:Column 4 is cpu_value host bb1localdomain type_instance steal
+DEBUG:PreProcessor:Column 5 is cpu_value host bb1localdomain type_instance system
+DEBUG:PreProcessor:Column 6 is cpu_value host bb1localdomain type_instance user
+DEBUG:PreProcessor:Column 7 is cpu_value host bb1localdomain type_instance wait
+DEBUG:PreProcessor:Column 8 is interface_tx host bb1localdomain instance lo type if_dropped
+DEBUG:PreProcessor:Column 9 is interface_tx host bb1localdomain instance lo type if_errors
+DEBUG:PreProcessor:Column 10 is interface_tx host bb1localdomain instance lo type if_octets
+DEBUG:PreProcessor:Column 11 is interface_tx host bb1localdomain instance lo type if_packets
+DEBUG:PreProcessor:Column 12 is interface_tx host bb1localdomain instance wlan0 type if_dropped
+DEBUG:PreProcessor:Column 13 is interface_tx host bb1localdomain instance wlan0 type if_errors
+DEBUG:PreProcessor:Column 14 is interface_tx host bb1localdomain instance wlan0 type if_octets
+DEBUG:PreProcessor:Column 15 is interface_tx host bb1localdomain instance wlan0 type if_packets
+DEBUG:PreProcessor:Column 16 is interface_rx host bb1localdomain instance lo type if_dropped
+DEBUG:PreProcessor:Column 17 is interface_rx host bb1localdomain instance lo type if_errors
+DEBUG:PreProcessor:Column 18 is interface_rx host bb1localdomain instance lo type if_octets
+DEBUG:PreProcessor:Column 19 is interface_rx host bb1localdomain instance lo type if_packets
+DEBUG:PreProcessor:Column 20 is interface_rx host bb1localdomain instance wlan0 type if_dropped
+DEBUG:PreProcessor:Column 21 is interface_rx host bb1localdomain instance wlan0 type if_errors
+DEBUG:PreProcessor:Column 22 is interface_rx host bb1localdomain instance wlan0 type if_octets
+DEBUG:PreProcessor:Column 23 is interface_rx host bb1localdomain instance wlan0 type if_packets
+DEBUG:PreProcessor:Column 24 is disk_io_time host bb1localdomain instance mmcblk1 type disk_io_time
+DEBUG:PreProcessor:Column 25 is disk_io_time host bb1localdomain instance mmcblk1boot0 type disk_io_time
+DEBUG:PreProcessor:Column 26 is disk_io_time host bb1localdomain instance mmcblk1boot1 type disk_io_time
+DEBUG:PreProcessor:Column 27 is disk_io_time host bb1localdomain instance mmcblk1p1 type disk_io_time
+DEBUG:PreProcessor:Column 28 is contextswitch_value host bb1localdomain type contextswitch
+DEBUG:PreProcessor:Data combined to single dataframe of dim (819600, 29)
+DEBUG:PreProcessor:Scaler fit to data.
+INFO:PreProcessor:Testing set created of dim (8, 68300, 29)
+INFO:PreProcessor:Training set created of dim (4, 54640, 29)
+INFO:PreProcessor:Validation set created of dim (4, 13660, 29)
+INFO:Tester:Starting tests with LinearModel_20
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 1 CAD f1 is 0.0
+INFO:Tester:For width 1 CAD re is 0.0
+INFO:Tester:For width 1 Cheb f1 is 0.0
+INFO:Tester:For width 1 Cheb re is 0.0
+INFO:Tester:For width 1 LOF f1 is 0.00028612303290414875
+INFO:Tester:For width 1 LOF re is 0.1
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 2 CAD f1 is 0.08823529411764706
+INFO:Tester:For width 2 CAD re is 0.4
+INFO:Tester:For width 2 Cheb f1 is 0.19269102990033224
+INFO:Tester:For width 2 Cheb re is 0.48333333333333334
+INFO:Tester:For width 2 LOF f1 is 0.002857006809199562
+INFO:Tester:For width 2 LOF re is 0.5
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 3 CAD f1 is 0.18421052631578946
+INFO:Tester:For width 3 CAD re is 0.6222222222222222
+INFO:Tester:For width 3 Cheb f1 is 0.33057851239669417
+INFO:Tester:For width 3 Cheb re is 0.6666666666666666
+INFO:Tester:For width 3 LOF f1 is 0.006181351338500308
+INFO:Tester:For width 3 LOF re is 0.7222222222222222
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30

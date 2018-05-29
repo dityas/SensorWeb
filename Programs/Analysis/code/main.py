@@ -11,7 +11,7 @@ import logging
 import argparse
 
 
-logging.basicConfig(level=logging.DEBUG, filename="f1_exp.log")
+logging.basicConfig(level=logging.DEBUG, filename="exp.log")
 
 # Make shell script option parser
 parser = argparse.ArgumentParser()
@@ -48,5 +48,5 @@ elif args.test:
 
         _tester = Tester(test_set=test[7, 3000:10000, :],
                          window=tsteps, model=model, model_name=name,
-                         store_dir="lof_images/")
+                         store_dir="comp_results/")
         _tester.run_tests()

@@ -167,77 +167,105 @@ class Tester:
         recall = recall_score(y_true=truth, y_pred=alarms)
         self.logger.info(f"For {_name}, f1 is {f1}, recall is {recall}")
 
+    def random_tests(self,
+                     width):
+
+        errors = []
+        trues = []
+        cads = []
+        chbs = []
+        lofs = []
+
+        for i in range(30):
+            self.logger.debug(f"Running iteration {i} of 30")
+            anomaly_range = numpy.random.randint(3000, 5000)
+            anomalous_series = numpy.random.randint(0, 28)
+            sample = numpy.copy(self.base_set)
+            true = numpy.zeros(sample.shape[0])
+            sample[anomaly_range:anomaly_range + width, anomalous_series] = 1.0
+            sample[anomaly_range:anomaly_range + width, anomalous_series + 1] = 1.0
+            true[anomaly_range:anomaly_range + width] = 1.0
+
+            error = self.__run_model(data=sample)
+            true = true[len(true) - len(error):]
+
+            cads.append(self.__run_CAD(data=error))
+            chbs.append(self.__run_Chebyshev(data=error))
+            lofs.append(self.__run_LOF(data=error))
+            trues.append(true)
+
+        cads = numpy.stack(cads, axis=0)
+        chbs = numpy.stack(chbs, axis=0)
+        lofs = numpy.stack(lofs, axis=0)
+        trues = numpy.stack(trues, axis=0)
+
+        cads_f1 = f1_score(y_true=trues.ravel(), y_pred=cads.ravel())
+        chbs_f1 = f1_score(y_true=trues.ravel(), y_pred=chbs.ravel())
+        lofs_f1 = f1_score(y_true=trues.ravel(), y_pred=lofs.ravel())
+
+        cads_re = recall_score(y_true=trues.ravel(), y_pred=cads.ravel())
+        chbs_re = recall_score(y_true=trues.ravel(), y_pred=chbs.ravel())
+        lofs_re = recall_score(y_true=trues.ravel(), y_pred=lofs.ravel())
+
+        self.logger.info(f"For width {width} CAD f1 is {cads_f1}")
+        self.logger.info(f"For width {width} CAD re is {cads_re}")
+        self.logger.info(f"For width {width} Cheb f1 is {chbs_f1}")
+        self.logger.info(f"For width {width} Cheb re is {chbs_re}")
+        self.logger.info(f"For width {width} LOF f1 is {lofs_f1}")
+        self.logger.info(f"For width {width} LOF re is {lofs_re}")
+
+        return {"cads_f1": cads_f1,
+                "chbs_f1": chbs_f1,
+                "lofs_f1": lofs_f1,
+                "cads_re": cads_re,
+                "chbs_re": chbs_re,
+                "lofs_re": lofs_re}
+
     def do_width_test(self):
+
+        cad_f1s = []
+        chb_f1s = []
+        lof_f1s = []
+        cad_res = []
+        chb_res = []
+        lof_res = []
+        widths = []
 
         for width in range(1, 20):
 
-            net_dataset = numpy.copy(self.base_set)
-            cpu_dataset = numpy.copy(self.base_set)
-            anomaly_range = numpy.random.randint(3000, 5000)
-            true = numpy.zeros(self.base_set.shape[0])
+            results = self.random_tests(width=width)
 
-            # Create synthetic anomalies in network and CPU usage.
-            net_dataset[anomaly_range: anomaly_range+width, 21: 23] = 1.0
-            cpu_dataset[anomaly_range: anomaly_range+width, 0] = 0.0
-            cpu_dataset[anomaly_range: anomaly_range+width, 6] = 1.0
-            true[anomaly_range: anomaly_range+width] = 1.0
+            cad_f1s.append(results["cads_f1"])
+            chb_f1s.append(results["chbs_f1"])
+            lof_f1s.append(results["lofs_f1"])
+            cad_res.append(results["cads_re"])
+            chb_res.append(results["chbs_re"])
+            lof_res.append(results["lofs_re"])
+            widths.append(width)
 
-            # Run prediction loop on synthetic data.
-            self.logger.debug(f"Running prediction on network flow attack anomaly duration {width}")
-            net_error = self.__run_model(net_dataset)
-            self.logger.debug(f"Running prediction on CPU busy anomaly duration {width}")
-            cpu_error = self.__run_model(cpu_dataset)
+        f1_name = f"{self.store_dir}/{self.model_name}_{width}_f1_.png"
+        re_name = f"{self.store_dir}/{self.model_name}_{width}_re_.png"
 
-            net_alarms = self.__run_CAD(numpy.array(net_error))
+        plotter.figure()
+        plotter.plot(cad_f1s, widths, 'r', label="CUSUM", linewidth=0.5)
+        plotter.plot(chb_f1s, widths, 'g', label="Chebyshev", linewidth=0.5)
+        plotter.plot(chb_f1s, widths, 'b', label="LOF", linewidth=0.5)
+        plotter.ylabel("f1 score")
+        plotter.xlabel("anomaly width")
+        plotter.ylim(0, 1)
+        plotter.legend()
+        plotter.savefig(f1_name, dpi=500)
 
-            self.store_plot([net_error,
-                             true[len(true)-len(net_error):],
-                             net_alarms],
-                            ["error",
-                             "truth",
-                             "alarms"], width, "net_cad")
+        self.logger.info(f"Saved f1 score plot {f1_name}")
 
-            cpu_alarms = self.__run_CAD(numpy.array(cpu_error))
+        plotter.figure()
+        plotter.plot(cad_res, widths, 'r', label="CUSUM", linewidth=0.5)
+        plotter.plot(chb_res, widths, 'g', label="Chebyshev", linewidth=0.5)
+        plotter.plot(chb_res, widths, 'b', label="LOF", linewidth=0.5)
+        plotter.ylabel("recall score")
+        plotter.xlabel("anomaly width")
+        plotter.ylim(0, 1)
+        plotter.legend()
+        plotter.savefig(re_name, dpi=500)
 
-            self.store_plot([net_error,
-                             true[len(true)-len(cpu_error):],
-                             cpu_alarms],
-                            ["error",
-                             "truth",
-                             "alarms"], width, "cpu_cad")
-
-            net_alarms = self.__run_Chebyshev(numpy.array(net_error))
-
-            self.store_plot([net_error,
-                             true[len(true)-len(net_error):],
-                             net_alarms],
-                            ["error",
-                             "truth",
-                             "alarms"], width, "net_chb")
-
-            cpu_alarms = self.__run_Chebyshev(numpy.array(cpu_error))
-
-            self.store_plot([net_error,
-                             true[len(true)-len(cpu_error):],
-                             cpu_alarms],
-                            ["error",
-                             "truth",
-                             "alarms"], width, "cpu_chb")
-
-            net_alarms = self.__run_LOF(numpy.array(net_error))
-
-            self.store_plot([net_error,
-                             true[len(true)-len(net_error):],
-                             net_alarms],
-                            ["error",
-                             "truth",
-                             "alarms"], width, "net_lof")
-
-            cpu_alarms = self.__run_LOF(numpy.array(cpu_error))
-
-            self.store_plot([net_error,
-                             true[len(true)-len(cpu_error):],
-                             cpu_alarms],
-                            ["error",
-                             "truth",
-                             "alarms"], width, "cpu_lof")
+        self.logger.info(f"Saved recall score plot {re_name}")
