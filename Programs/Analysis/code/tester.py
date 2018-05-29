@@ -247,9 +247,9 @@ class Tester:
         re_name = f"{self.store_dir}/{self.model_name}_{width}_re_.png"
 
         plotter.figure()
-        plotter.plot(cad_f1s, widths, 'r', label="CUSUM", linewidth=0.5)
-        plotter.plot(chb_f1s, widths, 'g', label="Chebyshev", linewidth=0.5)
-        plotter.plot(chb_f1s, widths, 'b', label="LOF", linewidth=0.5)
+        plotter.plot(widths, cad_f1s, 'r', label="CUSUM", linewidth=0.5)
+        plotter.plot(widths, chb_f1s, 'g', label="Chebyshev", linewidth=0.5)
+        plotter.plot(widths, lof_f1s, 'b', label="LOF", linewidth=0.5)
         plotter.ylabel("f1 score")
         plotter.xlabel("anomaly width")
         plotter.ylim(0, 1)
@@ -259,9 +259,9 @@ class Tester:
         self.logger.info(f"Saved f1 score plot {f1_name}")
 
         plotter.figure()
-        plotter.plot(cad_res, widths, 'r', label="CUSUM", linewidth=0.5)
-        plotter.plot(chb_res, widths, 'g', label="Chebyshev", linewidth=0.5)
-        plotter.plot(chb_res, widths, 'b', label="LOF", linewidth=0.5)
+        plotter.plot(widths, cad_res, 'r', label="CUSUM", linewidth=0.5)
+        plotter.plot(widths, chb_res, 'g', label="Chebyshev", linewidth=0.5)
+        plotter.plot(widths, lof_res, 'b', label="LOF", linewidth=0.5)
         plotter.ylabel("recall score")
         plotter.xlabel("anomaly width")
         plotter.ylim(0, 1)

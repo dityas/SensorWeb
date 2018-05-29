@@ -183,3 +183,587 @@ DEBUG:Tester:Running iteration 21 of 30
 DEBUG:Tester:Running iteration 22 of 30
 DEBUG:Tester:Running iteration 23 of 30
 DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 4 CAD f1 is 0.25073746312684364
+INFO:Tester:For width 4 CAD re is 0.7083333333333334
+INFO:Tester:For width 4 Cheb f1 is 0.42380952380952386
+INFO:Tester:For width 4 Cheb re is 0.7416666666666667
+INFO:Tester:For width 4 LOF f1 is 0.008736942070275403
+INFO:Tester:For width 4 LOF re is 0.7666666666666667
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 5 CAD f1 is 0.3032679738562092
+INFO:Tester:For width 5 CAD re is 0.7733333333333333
+INFO:Tester:For width 5 Cheb f1 is 0.49896049896049893
+INFO:Tester:For width 5 Cheb re is 0.8
+INFO:Tester:For width 5 LOF f1 is 0.011664295874822192
+INFO:Tester:For width 5 LOF re is 0.82
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 6 CAD f1 is 0.36734693877551017
+INFO:Tester:For width 6 CAD re is 0.8
+INFO:Tester:For width 6 Cheb f1 is 0.5504587155963302
+INFO:Tester:For width 6 Cheb re is 0.8333333333333334
+INFO:Tester:For width 6 LOF f1 is 0.014488636363636363
+INFO:Tester:For width 6 LOF re is 0.85
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 7 CAD f1 is 0.409778812572759
+INFO:Tester:For width 7 CAD re is 0.8380952380952381
+INFO:Tester:For width 7 Cheb f1 is 0.5970149253731343
+INFO:Tester:For width 7 Cheb re is 0.8571428571428571
+INFO:Tester:For width 7 LOF f1 is 0.01730496453900709
+INFO:Tester:For width 7 LOF re is 0.8714285714285714
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 8 CAD f1 is 0.4387646432374867
+INFO:Tester:For width 8 CAD re is 0.8583333333333333
+INFO:Tester:For width 8 Cheb f1 is 0.6323751891074131
+INFO:Tester:For width 8 Cheb re is 0.8708333333333333
+INFO:Tester:For width 8 LOF f1 is 0.01982909211085407
+INFO:Tester:For width 8 LOF re is 0.875
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 9 CAD f1 is 0.4427184466019417
+INFO:Tester:For width 9 CAD re is 0.8444444444444444
+INFO:Tester:For width 9 Cheb f1 is 0.6547455295735901
+INFO:Tester:For width 9 Cheb re is 0.8814814814814815
+INFO:Tester:For width 9 LOF f1 is 0.023102310231023104
+INFO:Tester:For width 9 LOF re is 0.9074074074074074
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 10 CAD f1 is 0.48288288288288295
+INFO:Tester:For width 10 CAD re is 0.8933333333333333
+INFO:Tester:For width 10 Cheb f1 is 0.6801007556675063
+INFO:Tester:For width 10 Cheb re is 0.9
+INFO:Tester:For width 10 LOF f1 is 0.025706214689265535
+INFO:Tester:For width 10 LOF re is 0.91
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 11 CAD f1 is 0.5190434012400355
+INFO:Tester:For width 11 CAD re is 0.8878787878787879
+INFO:Tester:For width 11 Cheb f1 is 0.7092198581560284
+INFO:Tester:For width 11 Cheb re is 0.9090909090909091
+INFO:Tester:For width 11 LOF f1 is 0.02839680300893277
+INFO:Tester:For width 11 LOF re is 0.9151515151515152
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 12 CAD f1 is 0.5500848896434635
+INFO:Tester:For width 12 CAD re is 0.9
+INFO:Tester:For width 12 Cheb f1 is 0.7135135135135136
+INFO:Tester:For width 12 Cheb re is 0.9166666666666666
+INFO:Tester:For width 12 LOF f1 is 0.031361502347417844
+INFO:Tester:For width 12 LOF re is 0.9277777777777778
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 13 CAD f1 is 0.565008025682183
+INFO:Tester:For width 13 CAD re is 0.9025641025641026
+INFO:Tester:For width 13 Cheb f1 is 0.7328556806550665
+INFO:Tester:For width 13 Cheb re is 0.9179487179487179
+INFO:Tester:For width 13 LOF f1 is 0.03441162681669011
+INFO:Tester:For width 13 LOF re is 0.941025641025641
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 14 CAD f1 is 0.5691294806144843
+INFO:Tester:For width 14 CAD re is 0.9261904761904762
+INFO:Tester:For width 14 Cheb f1 is 0.7255813953488371
+INFO:Tester:For width 14 Cheb re is 0.9285714285714286
+INFO:Tester:For width 14 LOF f1 is 0.03689138576779026
+INFO:Tester:For width 14 LOF re is 0.9380952380952381
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 15 CAD f1 is 0.613905325443787
+INFO:Tester:For width 15 CAD re is 0.9222222222222223
+INFO:Tester:For width 15 Cheb f1 is 0.7657247037374658
+INFO:Tester:For width 15 Cheb re is 0.9333333333333333
+INFO:Tester:For width 15 LOF f1 is 0.03983169705469846
+INFO:Tester:For width 15 LOF re is 0.9466666666666667
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 16 CAD f1 is 0.6390278770550393
+INFO:Tester:For width 16 CAD re is 0.93125
+INFO:Tester:For width 16 Cheb f1 is 0.774526678141136
+INFO:Tester:For width 16 Cheb re is 0.9375
+INFO:Tester:For width 16 LOF f1 is 0.04211017740429505
+INFO:Tester:For width 16 LOF re is 0.9395833333333333
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 17 CAD f1 is 0.6471787899388172
+INFO:Tester:For width 17 CAD re is 0.9333333333333333
+INFO:Tester:For width 17 Cheb f1 is 0.7901234567901235
+INFO:Tester:For width 17 Cheb re is 0.9411764705882353
+INFO:Tester:For width 17 LOF f1 is 0.04512820512820513
+INFO:Tester:For width 17 LOF re is 0.9490196078431372
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 18 CAD f1 is 0.6903622693096377
+INFO:Tester:For width 18 CAD re is 0.9351851851851852
+INFO:Tester:For width 18 Cheb f1 is 0.8031496062992127
+INFO:Tester:For width 18 Cheb re is 0.9444444444444444
+INFO:Tester:For width 18 LOF f1 is 0.047670033983520314
+INFO:Tester:For width 18 LOF re is 0.9481481481481482
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
+INFO:Tester:For width 19 CAD f1 is 0.6824583866837388
+INFO:Tester:For width 19 CAD re is 0.9350877192982456
+INFO:Tester:For width 19 Cheb f1 is 0.808702175543886
+INFO:Tester:For width 19 Cheb re is 0.9456140350877194
+INFO:Tester:For width 19 LOF f1 is 0.0505811250581125
+INFO:Tester:For width 19 LOF re is 0.9543859649122807
+INFO:Tester:Saved f1 score plot comp_results//LinearModel_20_19_f1_.png
+INFO:Tester:Saved recall score plot comp_results//LinearModel_20_19_re_.png
+INFO:Tester:Starting tests with LinearModel_2
+DEBUG:Tester:Running iteration 0 of 30
+DEBUG:Tester:Running iteration 1 of 30
+DEBUG:Tester:Running iteration 2 of 30
+DEBUG:Tester:Running iteration 3 of 30
+DEBUG:Tester:Running iteration 4 of 30
+DEBUG:Tester:Running iteration 5 of 30
+DEBUG:Tester:Running iteration 6 of 30
+DEBUG:Tester:Running iteration 7 of 30
+DEBUG:Tester:Running iteration 8 of 30
+DEBUG:Tester:Running iteration 9 of 30
+DEBUG:Tester:Running iteration 10 of 30
+DEBUG:Tester:Running iteration 11 of 30
+DEBUG:Tester:Running iteration 12 of 30
+DEBUG:Tester:Running iteration 13 of 30
+DEBUG:Tester:Running iteration 14 of 30
+DEBUG:Tester:Running iteration 15 of 30
+DEBUG:Tester:Running iteration 16 of 30
+DEBUG:Tester:Running iteration 17 of 30
+DEBUG:Tester:Running iteration 18 of 30
+DEBUG:Tester:Running iteration 19 of 30
+DEBUG:Tester:Running iteration 20 of 30
+DEBUG:Tester:Running iteration 21 of 30
+DEBUG:Tester:Running iteration 22 of 30
+DEBUG:Tester:Running iteration 23 of 30
+DEBUG:Tester:Running iteration 24 of 30
+DEBUG:Tester:Running iteration 25 of 30
+DEBUG:Tester:Running iteration 26 of 30
+DEBUG:Tester:Running iteration 27 of 30
+DEBUG:Tester:Running iteration 28 of 30
+DEBUG:Tester:Running iteration 29 of 30
