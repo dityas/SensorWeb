@@ -2,6 +2,7 @@ import logging
 import numpy
 from sklearn.metrics import mean_absolute_error, recall_score, f1_score
 from sklearn.neighbors import LocalOutlierFactor
+from scipy.stats import percentileofscore
 from models import flat_generator
 import matplotlib.pyplot as plotter
 import pandas
@@ -9,9 +10,10 @@ import pandas
 
 class Tester:
 
-    def __init__(self, test_set, model, window, model_name,
+    def __init__(self, test_set, show_set, model, window, model_name,
                  store_dir="images/"):
         self.base_set = test_set
+        self.show_set = show_set
         self.logger = logging.getLogger(self.__class__.__name__)
         self.model = model
         self.window = window
@@ -52,22 +54,29 @@ class Tester:
         return numpy.array(error).squeeze()
 
     def run_tests(self):
+        # Anomaly width test
+        self.do_width_test()
 
-        for i in range(1, 200):
-
-            # Anomaly width test
-            self.do_width_test()
-            break
-
-    def __run_LOF(self, data):
+    def __run_LOF(self, data, plot=0, true=None):
         clf = LocalOutlierFactor(n_neighbors=100, metric='euclidean')
         data = numpy.array(data)
         data = data[:, numpy.newaxis]
         outliers = clf.fit_predict(data)
         outliers = 1.0 * (outliers < 0)
+
+        if plot:
+            plotter.plot(data, 'g', label="Error", linewidth=0.5, alpha=0.5)
+            plotter.plot(outliers*data, 'r.', label="Anomalies", linewidth=0.5)
+            plotter.ylim(0, 0.2)
+            plotter.legend()
+            plotter.ylabel("Error")
+            plotter.xlabel("Time step")
+            plotter.savefig(f"{self.store_dir}/Detection_LOF.png", dpi=500)
+            plotter.close()
+
         return outliers
 
-    def __run_CAD(self, data, start=50, thres=6):
+    def __run_CAD(self, data, start=50, thres=6, plot=0, true=None):
 
         data = pandas.Series(data)
         running_mean = data.expanding().mean()
@@ -85,14 +94,31 @@ class Tester:
                 alarm[i] = 1.0
             else:
                 s_h = val
-        #plotter.plot(data, alpha=0.3)
-        #plotter.plot(data, alpha=0.3)
-        #plotter.plot(alarm)
-        #plotter.show()
+
+        if plot:
+            plotter.subplot(211)
+            plotter.plot(data, 'g', label="Error", linewidth=0.5, alpha=0.5)
+            plotter.plot(running_mean, 'b', label="Mean", linewidth=0.5)
+            plotter.plot(6 * running_std, 'r', label="Decision Boundary", linewidth=0.5)
+            plotter.plot(alarm * data, 'r.', label="Detected Anomalies", linewidth=0.5)
+            plotter.ylim(0, 0.2)
+            plotter.legend()
+            plotter.ylabel("Error")
+            plotter.subplot(212)
+            plotter.plot(data, 'g', label="Error", linewidth=0.5, alpha=0.5)
+            plotter.plot(running_mean, 'b', label="Mean", linewidth=0.5)
+            plotter.plot(6 * running_std, 'r', label="Decision Boundary", linewidth=0.5)
+            plotter.plot(true * data, 'b.', label="True Anomalies", linewidth=0.5)
+            plotter.ylim(0, 0.2)
+            plotter.legend()
+            plotter.ylabel("Error")
+            plotter.xlabel("Time step")
+            plotter.savefig(f"{self.store_dir}/Detection_CAD.png", dpi=500)
+            plotter.close()
 
         return alarm
 
-    def __run_Chebyshev(self, data):
+    def __run_Chebyshev(self, data, plot=0, true=None):
 
         arr = pandas.Series(data)
         mean = 0
@@ -127,18 +153,26 @@ class Tester:
 
             thres[i] = mean + (5 * std)
 
-        # mark = numpy.zeros(arr.shape[0])
-
-        # window = 100
-        #
-        # for i in range(window, outlier.shape[0]):
-        #     num = window
-        #     outliers = numpy.sum(outlier[i-window:i])
-        #     per = outliers/num
-        #     if per > 0.04:
-        #         mark[i-window:i] = outlier[i-window:i]
-        #     else:
-        #         mark[i] = 0.0
+        if plot:
+            plotter.subplot(211)
+            plotter.plot(arr, 'g', label="Error", linewidth=0.5, alpha=0.5)
+            plotter.plot(means, 'b', label="Mean", linewidth=0.5)
+            plotter.plot(thres, 'r', label="Decision Boundary", linewidth=0.5)
+            plotter.plot(outliers*arr, 'r.', label="Detected Anomalies", linewidth=0.5)
+            plotter.ylim(0, 0.2)
+            plotter.legend()
+            plotter.ylabel("Error")
+            plotter.subplot(212)
+            plotter.plot(arr, 'g', label="Error", linewidth=0.5, alpha=0.5)
+            plotter.plot(means, 'b', label="Mean", linewidth=0.5)
+            plotter.plot(thres, 'r', label="Decision Boundary", linewidth=0.5)
+            plotter.plot(true*arr, 'b.', label="True Anomalies", linewidth=0.5)
+            plotter.ylim(0, 0.2)
+            plotter.legend()
+            plotter.ylabel("Error")
+            plotter.xlabel("Time step")
+            plotter.savefig(f"{self.store_dir}/Detection_Cheb.png", dpi=500)
+            plotter.close()
 
         return outliers
 
@@ -167,6 +201,12 @@ class Tester:
         recall = recall_score(y_true=truth, y_pred=alarms)
         self.logger.info(f"For {_name}, f1 is {f1}, recall is {recall}")
 
+    def error_test(self):
+        error = self.__run_model(data=self.base_set)
+        mean_error = numpy.mean(numpy.array(error))
+        self.logger.info(f"{self.model_name} Test error: {mean_error}")
+        return mean_error
+
     def random_tests(self,
                      width):
 
@@ -176,7 +216,7 @@ class Tester:
         chbs = []
         lofs = []
 
-        for i in range(30):
+        for i in range(25, 30):
             self.logger.debug(f"Running iteration {i} of 30")
             anomaly_range = numpy.random.randint(3000, 5000)
             anomalous_series = numpy.random.randint(0, 28)
@@ -187,6 +227,18 @@ class Tester:
             true[anomaly_range:anomaly_range + width] = 1.0
 
             error = self.__run_model(data=sample)
+
+            if i == 29 and width == 19:
+                _error = error
+                true = true[len(true) - len(_error):]
+                pandas.Series(_error).plot(kind="density", legend=True, label="Error Values")
+                plotter.savefig(f"{self.store_dir}/{self.model_name}_{i}_pdf.png", dpi=500)
+                plotter.close()
+                self.logger.info(f"POS is: {percentileofscore(_error, numpy.mean(_error) + (5*numpy.std(_error)))}")
+                self.__run_CAD(data=_error, plot=1, true=true)
+                self.__run_Chebyshev(data=_error, plot=1, true=true)
+                self.__run_LOF(data=_error, plot=0, true=true)
+
             true = true[len(true) - len(error):]
 
             cads.append(self.__run_CAD(data=error))
@@ -231,7 +283,7 @@ class Tester:
         lof_res = []
         widths = []
 
-        for width in range(1, 20):
+        for width in range(16, 20):
 
             results = self.random_tests(width=width)
 
@@ -247,9 +299,9 @@ class Tester:
         re_name = f"{self.store_dir}/{self.model_name}_{width}_re_.png"
 
         plotter.figure()
-        plotter.plot(widths, cad_f1s, 'r', label="CUSUM", linewidth=0.5)
-        plotter.plot(widths, chb_f1s, 'g', label="Chebyshev", linewidth=0.5)
-        plotter.plot(widths, lof_f1s, 'b', label="LOF", linewidth=0.5)
+        plotter.plot(list(range(5, 96, 5)), chb_f1s, 'g', marker='x', label="Chebyshev", linewidth=0.5)
+        plotter.plot(list(range(5, 96, 5)), cad_f1s, 'r', marker='x', label="CUSUM", linewidth=0.5)
+        plotter.plot(list(range(5, 96, 5)), lof_f1s, 'b', marker='x', label="LOF", linewidth=0.5)
         plotter.ylabel("f1 score")
         plotter.xlabel("anomaly width")
         plotter.ylim(0, 1)
@@ -259,9 +311,9 @@ class Tester:
         self.logger.info(f"Saved f1 score plot {f1_name}")
 
         plotter.figure()
-        plotter.plot(widths, cad_res, 'r', label="CUSUM", linewidth=0.5)
-        plotter.plot(widths, chb_res, 'g', label="Chebyshev", linewidth=0.5)
-        plotter.plot(widths, lof_res, 'b', label="LOF", linewidth=0.5)
+        plotter.plot(list(range(5, 96, 5)), chb_res, 'g', marker='x', label="Chebyshev", linewidth=0.5)
+        plotter.plot(list(range(5, 96, 5)), cad_res, 'r', marker='x', label="CUSUM", linewidth=0.5)
+        plotter.plot(list(range(5, 96, 5)), lof_res, 'b', marker='x', label="LOF", linewidth=0.5)
         plotter.ylabel("recall score")
         plotter.xlabel("anomaly width")
         plotter.ylim(0, 1)
