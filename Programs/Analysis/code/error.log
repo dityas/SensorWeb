@@ -1,0 +1,121 @@
+INFO:PreProcessor:Finished reading CPU usage data.
+INFO:PreProcessor:Finished reading Network TX data.
+INFO:PreProcessor:Finished reading Network RX data.
+INFO:PreProcessor:Finished reading Disk IO data.
+INFO:PreProcessor:Finished reading Context switching data.
+INFO:PreProcessor:Dataset for node 1 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 2 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 3 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 4 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 5 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 6 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 7 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 8 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 9 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 10 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 11 created with shape (68300, 29)
+INFO:PreProcessor:Dataset for node 12 created with shape (68300, 29)
+DEBUG:PreProcessor:Column 0 is cpu_value host bb1localdomain type_instance idle
+DEBUG:PreProcessor:Column 1 is cpu_value host bb1localdomain type_instance interrupt
+DEBUG:PreProcessor:Column 2 is cpu_value host bb1localdomain type_instance nice
+DEBUG:PreProcessor:Column 3 is cpu_value host bb1localdomain type_instance softirq
+DEBUG:PreProcessor:Column 4 is cpu_value host bb1localdomain type_instance steal
+DEBUG:PreProcessor:Column 5 is cpu_value host bb1localdomain type_instance system
+DEBUG:PreProcessor:Column 6 is cpu_value host bb1localdomain type_instance user
+DEBUG:PreProcessor:Column 7 is cpu_value host bb1localdomain type_instance wait
+DEBUG:PreProcessor:Column 8 is interface_tx host bb1localdomain instance lo type if_dropped
+DEBUG:PreProcessor:Column 9 is interface_tx host bb1localdomain instance lo type if_errors
+DEBUG:PreProcessor:Column 10 is interface_tx host bb1localdomain instance lo type if_octets
+DEBUG:PreProcessor:Column 11 is interface_tx host bb1localdomain instance lo type if_packets
+DEBUG:PreProcessor:Column 12 is interface_tx host bb1localdomain instance wlan0 type if_dropped
+DEBUG:PreProcessor:Column 13 is interface_tx host bb1localdomain instance wlan0 type if_errors
+DEBUG:PreProcessor:Column 14 is interface_tx host bb1localdomain instance wlan0 type if_octets
+DEBUG:PreProcessor:Column 15 is interface_tx host bb1localdomain instance wlan0 type if_packets
+DEBUG:PreProcessor:Column 16 is interface_rx host bb1localdomain instance lo type if_dropped
+DEBUG:PreProcessor:Column 17 is interface_rx host bb1localdomain instance lo type if_errors
+DEBUG:PreProcessor:Column 18 is interface_rx host bb1localdomain instance lo type if_octets
+DEBUG:PreProcessor:Column 19 is interface_rx host bb1localdomain instance lo type if_packets
+DEBUG:PreProcessor:Column 20 is interface_rx host bb1localdomain instance wlan0 type if_dropped
+DEBUG:PreProcessor:Column 21 is interface_rx host bb1localdomain instance wlan0 type if_errors
+DEBUG:PreProcessor:Column 22 is interface_rx host bb1localdomain instance wlan0 type if_octets
+DEBUG:PreProcessor:Column 23 is interface_rx host bb1localdomain instance wlan0 type if_packets
+DEBUG:PreProcessor:Column 24 is disk_io_time host bb1localdomain instance mmcblk1 type disk_io_time
+DEBUG:PreProcessor:Column 25 is disk_io_time host bb1localdomain instance mmcblk1boot0 type disk_io_time
+DEBUG:PreProcessor:Column 26 is disk_io_time host bb1localdomain instance mmcblk1boot1 type disk_io_time
+DEBUG:PreProcessor:Column 27 is disk_io_time host bb1localdomain instance mmcblk1p1 type disk_io_time
+DEBUG:PreProcessor:Column 28 is contextswitch_value host bb1localdomain type contextswitch
+DEBUG:PreProcessor:Data combined to single dataframe of dim (819600, 29)
+DEBUG:PreProcessor:Scaler fit to data.
+INFO:PreProcessor:Testing set created of dim (8, 68300, 29)
+INFO:PreProcessor:Training set created of dim (4, 54640, 29)
+INFO:PreProcessor:Validation set created of dim (4, 13660, 29)
+INFO:Tester:Starting tests with LinearModel_20
+INFO:Tester:LinearModel_20 Test error: 0.008101642781822238
+INFO:Tester:Starting tests with LinearModel_2
+INFO:Tester:LinearModel_2 Test error: 0.013272897766128045
+INFO:Tester:Starting tests with Layer2NN_200
+INFO:Tester:Layer2NN_200 Test error: 0.01856318723733666
+INFO:Tester:Starting tests with Layer1NN_10
+INFO:Tester:Layer1NN_10 Test error: 0.007502069602150135
+INFO:Tester:Starting tests with Layer1NN_50
+INFO:Tester:Layer1NN_50 Test error: 0.007943048532953932
+INFO:Tester:Starting tests with Layer2NN_100
+INFO:Tester:Layer2NN_100 Test error: 0.007569342287696086
+INFO:Tester:Starting tests with Layer1NN_5
+INFO:Tester:Layer1NN_5 Test error: 0.00786565961320076
+INFO:Tester:Starting tests with Layer3NN_50
+INFO:Tester:Layer3NN_50 Test error: 0.007931287171666815
+INFO:Tester:Starting tests with LinearModel_100
+INFO:Tester:LinearModel_100 Test error: 0.008806447110118345
+INFO:Tester:Starting tests with LinearModel_10
+INFO:Tester:LinearModel_10 Test error: 0.008373148137418289
+INFO:Tester:Starting tests with Layer1NN_20
+INFO:Tester:Layer1NN_20 Test error: 0.007357685676687303
+INFO:Tester:Starting tests with Layer3NN_10
+INFO:Tester:Layer3NN_10 Test error: 0.007762199877611863
+INFO:Tester:Starting tests with Layer2NN_50
+INFO:Tester:Layer2NN_50 Test error: 0.007316496479603912
+INFO:Tester:Starting tests with Layer2NN_10
+INFO:Tester:Layer2NN_10 Test error: 0.00781944982415718
+INFO:Tester:Starting tests with Layer3NN_200
+INFO:Tester:Layer3NN_200 Test error: 0.06189905921145983
+INFO:Tester:Starting tests with Layer2NN_5
+INFO:Tester:Layer2NN_5 Test error: 0.007276644953247961
+INFO:Tester:Starting tests with Layer1NN_200
+INFO:Tester:Layer1NN_200 Test error: 0.008591916764396914
+INFO:Tester:Starting tests with Layer2NN_20
+INFO:Tester:Layer2NN_20 Test error: 0.0072685896402801126
+INFO:Tester:Starting tests with LinearModel_5
+INFO:Tester:LinearModel_5 Test error: 0.00870475020483505
+INFO:Tester:Starting tests with Layer3NN_20
+INFO:Tester:Layer3NN_20 Test error: 0.008002848187809171
+INFO:Tester:Starting tests with Layer3NN_100
+INFO:Tester:Layer3NN_100 Test error: 0.008345713491226248
+INFO:Tester:Starting tests with Layer2NN_2
+INFO:Tester:Layer2NN_2 Test error: 0.008554647088079
+INFO:Tester:Starting tests with Layer3NN_2
+INFO:Tester:Layer3NN_2 Test error: 0.008945009860485145
+INFO:Tester:Starting tests with LinearModel_50
+INFO:Tester:LinearModel_50 Test error: 0.008011097380863344
+INFO:Tester:Starting tests with Layer1NN_100
+INFO:Tester:Layer1NN_100 Test error: 0.007729839553975366
+INFO:Tester:Starting tests with LinearModel_200
+INFO:Tester:LinearModel_200 Test error: 0.009338282591205541
+INFO:Tester:Starting tests with Layer3NN_5
+INFO:Tester:Layer3NN_5 Test error: 0.007963405267318127
+INFO:Tester:Starting tests with Layer1NN_2
+INFO:Tester:Layer1NN_2 Test error: 0.008918771493121707
+INFO:EWM_Model:Beginning tests for EWMA_2
+INFO:EWM_Model:Error is 0.009897255068666152
+INFO:EWM_Model:Beginning tests for EWMA_5
+INFO:EWM_Model:Error is 0.019722159854775934
+INFO:EWM_Model:Beginning tests for EWMA_10
+INFO:EWM_Model:Error is 0.02343074154192539
+INFO:EWM_Model:Beginning tests for EWMA_20
+INFO:EWM_Model:Error is 0.025221162848094513
+INFO:EWM_Model:Beginning tests for EWMA_50
+INFO:EWM_Model:Error is 0.02623763625306226
+INFO:EWM_Model:Beginning tests for EWMA_100
+INFO:EWM_Model:Error is 0.0265625873068389
+INFO:EWM_Model:Beginning tests for EWMA_200
+INFO:EWM_Model:Error is 0.02672323092876593
