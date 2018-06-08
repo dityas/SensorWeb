@@ -40,4 +40,8 @@ class Device:
         Simulates a device with various states.
     """
 
-    def __init__(self)
+    def __init__(self, device_sequence, data_dir="../data"):
+        self.sequence = device_sequence
+
+    def run(self, iterations=300):
+        pass
