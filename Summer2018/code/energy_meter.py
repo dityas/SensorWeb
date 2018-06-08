@@ -55,8 +55,8 @@ class LowSensitivityLinearEM(EnergyMeter):
 
     def compute_energy(self, cpu, network, disk):
         energy = 0.5 + (self.cpu_factor * cpu) + \
-                 (self.disk_factor * cpu) + \
-                 (self.network_factor * cpu)
+                 (self.disk_factor * disk) + \
+                 (self.network_factor * network)
 
         return energy
 
@@ -81,7 +81,7 @@ class HighSensitivityLinearEM(EnergyMeter):
 
     def compute_energy(self, cpu, network, disk):
         energy = 0.01 + (self.cpu_factor * cpu) + \
-                 (self.disk_factor * cpu) + \
-                 (self.network_factor * cpu)
+                 (self.disk_factor * disk) + \
+                 (self.network_factor * network)
 
         return energy
