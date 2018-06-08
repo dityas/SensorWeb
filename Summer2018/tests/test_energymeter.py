@@ -33,19 +33,19 @@ class TestEnergyMeter(unittest.TestCase):
     def test_low_EM_scale(self):
 
         data = self.send_over_network.get_data(start=1, stop=2)
-        data = pandas.DataFrame(data, columns=["cpu", "disk", "network"])
+        # data = pandas.DataFrame(data, columns=["cpu", "disk", "network"])
         data = self.lowEM.get_data(data)
         self.assertTrue(numpy.max(data.as_matrix()) <= 1.0 and
                         numpy.min(data.as_matrix()) >= 0.0)
 
         data = self.compute.get_data(start=1, stop=2)
-        data = pandas.DataFrame(data, columns=["cpu", "disk", "network"])
+        # data = pandas.DataFrame(data, columns=["cpu", "disk", "network"])
         data = self.lowEM.get_data(data)
         self.assertTrue(numpy.max(data.as_matrix()) <= 1.0 and
                         numpy.min(data.as_matrix()) >= 0.0)
 
         data = self.read_file.get_data(start=1, stop=2)
-        data = pandas.DataFrame(data, columns=["cpu", "disk", "network"])
+        # data = pandas.DataFrame(data, columns=["cpu", "disk", "network"])
         data = self.lowEM.get_data(data)
         self.assertTrue(numpy.max(data.as_matrix()) <= 1.0 and
                         numpy.min(data.as_matrix()) >= 0.0)

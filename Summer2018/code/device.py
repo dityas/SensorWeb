@@ -1,5 +1,6 @@
 import logging
 import numpy
+import pandas
 from component import CPU, DiskIO, Network
 
 
@@ -31,7 +32,7 @@ class DeviceState:
                             disk_samples,
                             network_samples], axis=1)
 
-        return data
+        return pandas.DataFrame(data, columns=["cpu", "disk", "network"])
 
 
 class Device:
