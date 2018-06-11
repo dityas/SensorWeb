@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 sys.path.append("/home/adityas/UGA/SensorWeb/scripts/Summer2018/code")
 
-from device import Device, DeviceState
+from simulator import Device, DeviceState
 
 parser = argparse.ArgumentParser()
 parser.add_argument("s", action="store", help="sensitivity of EM")

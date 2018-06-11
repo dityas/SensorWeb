@@ -4,7 +4,7 @@ import numpy
 
 sys.path.append("/home/adityas/UGA/SensorWeb/scripts/Summer2018/code")
 
-from device import DeviceState
+from simulator import DeviceState
 
 
 class TestDeviceState(unittest.TestCase):

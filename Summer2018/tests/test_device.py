@@ -4,8 +4,8 @@ import matplotlib.pyplot as plotter
 
 sys.path.append("/home/adityas/UGA/SensorWeb/scripts/Summer2018/code")
 
-from device import DeviceState, Device
-from energy_meter import LowSensitivityLinearEM, HighSensitivityLinearEM
+from simulator import DeviceState, Device
+from simulator import LowSensitivityLinearEM, HighSensitivityLinearEM
 
 
 class TestEnergyMeter(unittest.TestCase):
