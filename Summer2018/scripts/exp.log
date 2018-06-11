@@ -7,7 +7,7 @@ DEBUG:Network:Networking component initialized
 DEBUG:CPU:CPU component initialized
 DEBUG:DiskIO:Disk IO component initialized
 DEBUG:Network:Networking component initialized
-INFO:HighSensitivityLinearEM:Energy meter init with factors cpu:0.23211038674579382 + disk:0.23856534713332103 + net:0.2348188572284969
+INFO:HighSensitivityLinearEM:Energy meter init with factors cpu:0.24792518649303633 + disk:0.2550646624326527 + net:0.2542521020480565
 INFO:Device:Device initialised
 DEBUG:Device:Device in state compute
 DEBUG:Device:Device in state net_send

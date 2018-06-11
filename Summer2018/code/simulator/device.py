@@ -76,5 +76,5 @@ class Device:
         for i in range(iterations):
             data = self.run()
             name = f"{self.data_dir}/run_{i}.csv"
-            data.to_csv(name)
+            data.to_csv(name, index=False)
             self.logger.debug(f"Iteration {i} written to {name}.")
