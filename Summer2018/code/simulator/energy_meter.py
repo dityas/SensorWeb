@@ -76,8 +76,8 @@ class HighSensitivityLinearEM(EnergyMeter):
         self.logger = logging.getLogger(f"{self.__class__.__name__}")
 
         self.logger.info(f"Energy meter init with factors "\
-                         "cpu:{self.cpu_factor} + disk:{self.disk_factor} + "\
-                         "net:{self.network_factor}")
+                         f"cpu:{self.cpu_factor} + disk:{self.disk_factor} + "\
+                         f"net:{self.network_factor}")
 
     def compute_energy(self, cpu, network, disk):
         energy = 0.01 + (self.cpu_factor * cpu) + \
