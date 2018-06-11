@@ -5,8 +5,8 @@ import pandas
 
 sys.path.append("/home/adityas/UGA/SensorWeb/scripts/Summer2018/code")
 
-from simulator import DeviceState
-from simulator import LowSensitivityLinearEM, HighSensitivityLinearEM
+from simulator.device import DeviceState
+from simulator.energy_meter import LowSensitivityLinearEM, HighSensitivityLinearEM
 
 
 class TestEnergyMeter(unittest.TestCase):

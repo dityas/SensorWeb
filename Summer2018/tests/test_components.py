@@ -5,7 +5,7 @@ import numpy
 
 sys.path.append("/home/adityas/UGA/SensorWeb/scripts/Summer2018/code")
 
-from simulator import CPU, DiskIO, Network
+from simulator.component import CPU, DiskIO, Network
 
 
 class TestComponents(unittest.TestCase):

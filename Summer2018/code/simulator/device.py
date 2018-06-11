@@ -1,8 +1,8 @@
 import logging
 import numpy
 import pandas
-from component import CPU, DiskIO, Network
-from energy_meter import HighSensitivityLinearEM, LowSensitivityLinearEM
+from simulator.component import CPU, DiskIO, Network
+from simulator.energy_meter import HighSensitivityLinearEM
 
 
 class DeviceState:
