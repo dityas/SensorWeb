@@ -63,10 +63,18 @@ class Device:
 
     def run(self):
         data = []
-        for state in self.sequence:
-            self.logger.debug(f"Device in state {state.name}")
-            state_data = state.get_data(start=1, stop=2)
-            state_data = self.energy_meter.get_data(state_data)
-            data.append(state_data)
+        for i in range(10):
+            for state in self.sequence:
+                self.logger.debug(f"Device in state {state.name}")
+                state_data = state.get_data(start=0, stop=10)
+                state_data = self.energy_meter.get_data(state_data)
+                data.append(state_data)
 
         return pandas.concat(data, ignore_index=True)
+
+    def write_to_disk(self, iterations):
+        for i in range(iterations):
+            data = self.run()
+            name = f"{self.data_dir}/run_{i}.csv"
+            data.to_csv(name)
+            self.logger.debug(f"Iteration {i} written to {name}.")

@@ -37,16 +37,21 @@ class TestEnergyMeter(unittest.TestCase):
 
     def test_visualise_data(self):
         data = self.device.run()
+        data = data[:5000]
         plotter.subplot(411)
         plotter.plot(data["cpu"])
+        plotter.ylabel("CPU")
         plotter.ylim(0, 1)
         plotter.subplot(412)
         plotter.plot(data["disk"])
+        plotter.ylabel("DiskIO")
         plotter.ylim(0, 1)
         plotter.subplot(413)
         plotter.plot(data["network"])
+        plotter.ylabel("Network")
         plotter.ylim(0, 1)
         plotter.subplot(414)
         plotter.plot(data["energy"])
+        plotter.ylabel("Energy")
         plotter.ylim(0, 1)
         plotter.show()

@@ -49,9 +49,9 @@ class LowSensitivityLinearEM(EnergyMeter):
         self.network_factor = numpy.random.normal(0.1, 0.01)
         self.logger = logging.getLogger(f"{self.__class__.__name__}")
 
-        self.logger.info(f"Energy meter init with factors \
-        cpu:{self.cpu_factor} + disk:{self.disk_factor} + \
-        net:{self.network_factor}")
+        self.logger.info(f"Energy meter init with factors" \
+                         "cpu:{self.cpu_factor} + disk:{self.disk_factor} +" \
+                         "net:{self.network_factor}")
 
     def compute_energy(self, cpu, network, disk):
         energy = 0.5 + (self.cpu_factor * cpu) + \
@@ -75,9 +75,9 @@ class HighSensitivityLinearEM(EnergyMeter):
 
         self.logger = logging.getLogger(f"{self.__class__.__name__}")
 
-        self.logger.info(f"Energy meter init with factors \
-        cpu:{self.cpu_factor} + disk:{self.disk_factor} + \
-        net:{self.network_factor}")
+        self.logger.info(f"Energy meter init with factors "\
+                         "cpu:{self.cpu_factor} + disk:{self.disk_factor} + "\
+                         "net:{self.network_factor}")
 
     def compute_energy(self, cpu, network, disk):
         energy = 0.01 + (self.cpu_factor * cpu) + \
