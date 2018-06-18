@@ -43,7 +43,7 @@ def read_data(filename):
     return data
 
 
-def sample_data(samples=500, stime=60):
+def sample_data(samples=500, stime=300):
 
     data = []
     sleep_time = (1.0 / samples)

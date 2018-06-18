@@ -42,16 +42,17 @@ class Tester:
             pred = self.model.predict(_input)
             # print(target.shape)
             # print(pred.shape)
-            preds.append(pred.squeeze())
             #print(numpy.array(preds).shape)
             error.append(mean_absolute_error(y_pred=pred,
                                              y_true=target))
+            pred = numpy.abs(pred - target)
+            preds.append(pred.squeeze())
 
         targets = numpy.vstack(targets)
         preds = numpy.vstack(preds)
         # differences = numpy.abs(targets-preds)
         # print(numpy.array(error).shape)
-        return numpy.array(error).squeeze()
+        return numpy.array(error).squeeze(), preds
 
     def run_tests(self):
         # Anomaly width test
@@ -216,7 +217,7 @@ class Tester:
         chbs = []
         lofs = []
 
-        for i in range(25, 30):
+        for i in range(30):
             self.logger.debug(f"Running iteration {i} of 30")
             anomaly_range = numpy.random.randint(3000, 5000)
             anomalous_series = numpy.random.randint(0, 28)
@@ -226,7 +227,11 @@ class Tester:
             sample[anomaly_range:anomaly_range + width, anomalous_series + 1] = 1.0
             true[anomaly_range:anomaly_range + width] = 1.0
 
-            error = self.__run_model(data=sample)
+            series = numpy.zeros(shape=sample.shape)
+            series[anomaly_range:anomaly_range + width, anomalous_series] = 1.0
+            series[anomaly_range:anomaly_range + width, anomalous_series + 1] = 1.0
+
+            error, preds = self.__run_model(data=sample)
 
             if i == 29 and width == 19:
                 _error = error
@@ -240,6 +245,27 @@ class Tester:
                 self.__run_LOF(data=_error, plot=0, true=true)
 
             true = true[len(true) - len(error):]
+            # series = series[len(series) - len(error):, :]
+            # labels = numpy.array(self.__run_Chebyshev(data=error))
+            # labels = numpy.tile(labels, (series.shape[1], 1)).T
+            #
+            # ano = ((labels * preds) > 0.0) * 1.0
+            #
+            # _ano = numpy.argsort(ano, axis=1)[:, -2:] * labels[:, :2]
+            #
+            # detected = numpy.zeros(shape=ano.shape)
+            #
+            # for i in range(_ano.shape[0]):
+            #     if numpy.sum(_ano[i, :]) != 0.0:
+            #         detected[i, int(_ano[i, 0])] = 1.0
+            #         detected[i, int(_ano[i, 1])] = 1.0
+            #
+            # #print(recall_score(y_true=series.ravel(), y_pred=detected.ravel()))
+            # print(numpy.sum(series))
+            # print(numpy.sum(detected))
+            # print(numpy.sum(series * detected))
+            # print(numpy.max(detected))
+
 
             cads.append(self.__run_CAD(data=error))
             chbs.append(self.__run_Chebyshev(data=error))
@@ -283,7 +309,7 @@ class Tester:
         lof_res = []
         widths = []
 
-        for width in range(16, 20):
+        for width in range(1, 20):
 
             results = self.random_tests(width=width)
 

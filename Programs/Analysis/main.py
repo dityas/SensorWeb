@@ -13,7 +13,7 @@ def get_files(directory, files):
     return filenames
 
 
-DATA_SET = "ansi_final"
+DATA_SET = "summer"
 PATH = f"/home/adityas/Kaggle/SensorWeb/data/{DATA_SET}/"
 
 
@@ -44,5 +44,6 @@ organise_data(PATH, r".+cpu_.+\.csv", name="cpu")
 organise_data(PATH, r".+network_rx_.+\.csv", name="network_rx", key=lambda x: int(str(x).split("/")[-1].split(".")[0].split("_")[2]))
 organise_data(PATH, r".+network_tx_.+\.csv", name="network_tx", key=lambda x: int(str(x).split("/")[-1].split(".")[0].split("_")[2]))
 organise_data(PATH, r".+disk_io_.+\.csv", name="disk_io", key=lambda x: int(str(x).split("/")[-1].split(".")[0].split("_")[2]))
-organise_data(PATH, r".+processes_.+\.csv", name="processes")
+#organise_data(PATH, r".+processes_.+\.csv", name="processes")
 organise_data(PATH, r".+context_.+\.csv", name="context")
+organise_data(PATH, r".+power_.+\.csv", name="power")
