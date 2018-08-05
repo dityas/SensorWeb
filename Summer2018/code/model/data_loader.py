@@ -22,3 +22,13 @@ class DataLoader:
             Gets a batch of data.
         """
         return pandas.read_csv(self.files[i])
+
+
+class SeqDataLoader(DataLoader):
+
+    """
+        Returns data from dataloader in a seq2point compitable format.
+    """
+
+    def __init__(self, files):
+        super().__init__(files)

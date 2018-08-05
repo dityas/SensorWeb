@@ -4,9 +4,9 @@ from influxdb import DataFrameClient
 from pathlib import Path
 from query import Query
 
-DATA_DIR = "/home/adityas/Kaggle/SensorWeb/data/summer/"
-start = datetime.datetime(2018, 6, 15, 00, 00, 00)
-end = datetime.datetime(2018, 6, 15, 11, 00, 00)
+DATA_DIR = "/home/adityas/Kaggle/SensorWeb/data/summer_final_test/"
+start = datetime.datetime(2018, 7, 25, 7, 00, 00)
+end = datetime.datetime(2018, 7, 25, 12, 00, 00)
 batch_delta = datetime.timedelta(seconds=3600)
 delta = 5
 
@@ -71,19 +71,22 @@ time_generator = time_range_generator(start, end, batch_delta)
 get_data(query="cpu", name="cpu", directory=DATA_DIR)
 
 time_generator = time_range_generator(start, end, batch_delta)
-get_data(query="network_tx", name="network_tx", directory=DATA_DIR)
+get_data(query="network_tx", name="tx", directory=DATA_DIR)
 
 time_generator = time_range_generator(start, end, batch_delta)
-get_data(query="network_rx", name="network_rx", directory=DATA_DIR)
+get_data(query="network_rx", name="rx", directory=DATA_DIR)
 
 time_generator = time_range_generator(start, end, batch_delta)
-get_data(query="disk_io", name="disk_io", directory=DATA_DIR)
+get_data(query="disk_io", name="disk", directory=DATA_DIR)
 
 #time_generator = time_range_generator(start, end, batch_delta)
 #get_data(query="processes", name="processes", directory=DATA_DIR)
 
-time_generator = time_range_generator(start, end, batch_delta)
-get_data(query="context", name="context", directory=DATA_DIR)
+# time_generator = time_range_generator(start, end, batch_delta)
+# get_data(query="context", name="context", directory=DATA_DIR)
 
 time_generator = time_range_generator(start, end, batch_delta)
 get_data(query="power", name="power", directory=DATA_DIR)
+
+time_generator = time_range_generator(start, end, batch_delta)
+get_data(query="voltage", name="voltage", directory=DATA_DIR)
